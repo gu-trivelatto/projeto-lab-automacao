@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "start": "node-red"
+    "start": "node-red -u flows"
   },
   "dependencies": {
     "node-red": "^4.0.9",
-    "node-red-dashboard": "^3.6.5"
+    "node-red-dashboard": "^3.6.5",
+    "postgrestor": "^0.0.2"
   }
 }
