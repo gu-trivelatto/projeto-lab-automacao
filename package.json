@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "start": "node-red -u flows"
+    "start": "node-red -u flows",
+    "dev": "node-red -u flows -s flows/custom-settings.js",
+    "dev-metrics": "node-red -u flows -s flows/custom-settings.js -D logging.console.metrics=true"
   },
   "dependencies": {
     "node-red": "^4.0.9",
