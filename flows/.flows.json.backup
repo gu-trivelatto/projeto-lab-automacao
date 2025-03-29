@@ -293,7 +293,7 @@
         "postgresDB": "6c39d5fa539d0b1b",
         "output": true,
         "outputs": 1,
-        "x": 550,
+        "x": 310,
         "y": 460,
         "wires": [
             [
@@ -314,37 +314,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 850,
+        "x": 610,
         "y": 460,
         "wires": []
-    },
-    {
-        "id": "7793ae5b2baea522",
-        "type": "inject",
-        "z": "b058e3d3268403eb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 300,
-        "y": 460,
-        "wires": [
-            [
-                "74f08a458d118c55"
-            ]
-        ]
     }
 ]
