@@ -8,6 +8,22 @@
         "env": []
     },
     {
+        "id": "c0c87725f2b6a546",
+        "type": "tab",
+        "label": "user",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7ff87b268efdbf78",
+        "type": "tab",
+        "label": "manager",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2fa5a786019761a6",
         "type": "mqtt-broker",
         "name": "Labsoftlot",
@@ -162,6 +178,268 @@
         "max": 10,
         "min": 1,
         "idle": 1000
+    },
+    {
+        "id": "f3c5518521d994b4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#6fc0db",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#1d4e89",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#6fc0db",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#6fc0db",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": true
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": true
+                },
+                "group-textColor": {
+                    "value": "#acdbea",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": true
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": true
+                },
+                "widget-backgroundColor": {
+                    "value": "#6fc0db",
+                    "edited": true
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": true
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "68f25da057c68e6d",
+        "type": "ui_tab",
+        "name": "polibras",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0d6348cd3c581ac5",
+        "type": "ui_group",
+        "name": "user",
+        "tab": "68f25da057c68e6d",
+        "order": 2,
+        "disp": true,
+        "width": 5,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f68e84da2add074e",
+        "type": "ui_group",
+        "name": "charging data",
+        "tab": "68f25da057c68e6d",
+        "order": 3,
+        "disp": true,
+        "width": 12,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "57383ef85f904023",
+        "type": "ui_group",
+        "name": "bill",
+        "tab": "68f25da057c68e6d",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4151d7703cfd2b05",
+        "type": "ui_tab",
+        "name": "polibras - management",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d9d99228efd78e53",
+        "type": "ui_group",
+        "name": "general info",
+        "tab": "4151d7703cfd2b05",
+        "order": 1,
+        "disp": true,
+        "width": 9,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "812c9f59fa48c699",
+        "type": "ui_group",
+        "name": "revenue",
+        "tab": "4151d7703cfd2b05",
+        "order": 2,
+        "disp": true,
+        "width": 4,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0a04b855efa1e24e",
+        "type": "ui_group",
+        "name": "bills",
+        "tab": "4151d7703cfd2b05",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b17c97df988fc2a7",
+        "type": "ui_group",
+        "name": "prices",
+        "tab": "4151d7703cfd2b05",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7eb4ad1bb9f8ef34",
+        "type": "ui_group",
+        "name": "new prices",
+        "tab": "4151d7703cfd2b05",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "636338aa3e615159",
+        "type": "ui_spacer",
+        "z": "7ff87b268efdbf78",
+        "name": "spacer",
+        "group": "d9d99228efd78e53",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "a6e4fd0925f95c20",
+        "type": "ui_spacer",
+        "z": "7ff87b268efdbf78",
+        "name": "spacer",
+        "group": "d9d99228efd78e53",
+        "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "547a72937277fb12",
+        "type": "ui_spacer",
+        "z": "7ff87b268efdbf78",
+        "name": "spacer",
+        "group": "d9d99228efd78e53",
+        "order": 8,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "62e692277e81db90",
+        "type": "ui_spacer",
+        "z": "7ff87b268efdbf78",
+        "name": "spacer",
+        "group": "0a04b855efa1e24e",
+        "order": 2,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "04d52c4b34ef65b9",
+        "type": "ui_spacer",
+        "z": "7ff87b268efdbf78",
+        "name": "spacer",
+        "group": "0a04b855efa1e24e",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "972bfb65d25c1fbc",
+        "type": "ui_spacer",
+        "z": "7ff87b268efdbf78",
+        "name": "spacer",
+        "group": "0a04b855efa1e24e",
+        "order": 6,
+        "width": 2,
+        "height": 1
     },
     {
         "id": "098f0eb02b5e1018",
@@ -346,5 +624,1471 @@
                 "74f08a458d118c55"
             ]
         ]
+    },
+    {
+        "id": "d577c6e7f2aa82bd",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "start",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('prices', [1, 2, 3]);",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0669dfb2ddb01f3",
+        "type": "inject",
+        "z": "c0c87725f2b6a546",
+        "name": "engine",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 280,
+        "y": 400,
+        "wires": [
+            [
+                "85e50fb9af8b7256",
+                "8b62aaf15d0e285a",
+                "d8f72287e5ae31c8",
+                "b9e14ec19f763fe9",
+                "cafdc93db196d541",
+                "20b22fe08255570b",
+                "1eb8ad38d4736ee8",
+                "6f43443aeb8ace08",
+                "925c79710f12ab65",
+                "d8259b9484477a0a",
+                "39cec44df78e8bd9",
+                "8b6709114939f29d"
+            ]
+        ]
+    },
+    {
+        "id": "85e50fb9af8b7256",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "generator",
+        "func": "const station = flow.get('station');\nconst user = flow.get('user');\nconst bill = flow.get('bill');\n\nif (station.enable) {\n    const rnd = Math.floor(Math.random() * 10) + 1;\n    \n    user.remainingEnergy += (rnd * 2);\n    \n    station.power = rnd;\n    station.transferedEnergy += (rnd * 2);\n\n    bill.chargedEnergy += (rnd * 2);\n    bill.value = bill.chargedEnergy * bill.pricePerEnergy;\n\n    flow.set('station', station);\n    flow.set('user', user);\n    flow.set('bill', bill);\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8b62aaf15d0e285a",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "power",
+        "func": "const station = flow.get('station');\n\nif (station.enable)\n    return {payload: station.power};\nelse\n    return {payload: 0};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "72be1021655bc916",
+                "af0c8a794d5177b2"
+            ]
+        ]
+    },
+    {
+        "id": "72be1021655bc916",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "f68e84da2add074e",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "charger power",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 700,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "086daf833efc0895",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "f68e84da2add074e",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "car energy",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 690,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "d8f72287e5ae31c8",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "car energy",
+        "func": "const user = flow.get('user');\n\nreturn {payload: user.remainingEnergy, topic: 'car energy'};\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 480,
+        "wires": [
+            [
+                "086daf833efc0895",
+                "69dd362a209da38d"
+            ]
+        ]
+    },
+    {
+        "id": "fadf2a18085299a4",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "nameInput",
+        "func": "const nameInput = msg.payload;\nflow.set('nameInput', nameInput);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0153ce0046a0c270",
+        "type": "ui_text_input",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "label": "name",
+        "tooltip": "",
+        "group": "0d6348cd3c581ac5",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 290,
+        "y": 220,
+        "wires": [
+            [
+                "fadf2a18085299a4"
+            ]
+        ]
+    },
+    {
+        "id": "edae77a51194c7b5",
+        "type": "ui_button",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "group": "0d6348cd3c581ac5",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "start",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "6dd2a349b5ebd5de",
+                "b51fdb569db729a7"
+            ]
+        ]
+    },
+    {
+        "id": "6dd2a349b5ebd5de",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "start charging",
+        "func": "function getRandomDateLastMonth() {\n    const today = new Date();\n    const firstDayLastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);\n    const lastDayLastMonth = new Date(today.getFullYear(), today.getMonth(), 0);\n\n    const randomTime = firstDayLastMonth.getTime() + Math.random() * (lastDayLastMonth.getTime() - firstDayLastMonth.getTime());\n    return new Date(randomTime);\n}\n\nconst user = flow.get('user');\nconst station = flow.get('station');\nconst bill = flow.get('bill');\n\nuser.name = flow.get('nameInput');\nlet rnd = Math.floor(Math.random() * 10) + 1;\nuser.remainingEnergy = rnd;\nrnd = Math.floor(Math.random() * (120 - 100 + 1)) + 100;\nuser.totalEnergy = rnd;\n\nstation.enable = true;\nstation.transferedEnergy = 0;\nstation.power = 0;\n\nbill.date = getRandomDateLastMonth();\nbill.username = flow.get('nameInput');\nbill.chargedEnergy = 0;\nbill.value = 0;\nrnd = Math.floor(Math.random() * 3);\nbill.period = ['morning', 'afternoon', 'night'][rnd];\nbill.pricePerEnergy = global.get('prices')[rnd];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b9e14ec19f763fe9",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "generator stopper",
+        "func": "const user = flow.get('user');\nconst station = flow.get('station');\n\nif (user.remainingEnergy >= user.totalEnergy) {\n    station.enable = false;\n}\n\nflow.set('station', station);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cafdc93db196d541",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "car total energy",
+        "func": "return {payload: flow.get('user').totalEnergy, topic: 'total energy'};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 520,
+        "wires": [
+            [
+                "f2dd99add1175293",
+                "69dd362a209da38d"
+            ]
+        ]
+    },
+    {
+        "id": "f2dd99add1175293",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "f68e84da2add074e",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "car total energy",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 700,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "20b22fe08255570b",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "chargedEnergy",
+        "func": "const bill = flow.get('bill');\nreturn {payload: bill.chargedEnergy};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 860,
+        "wires": [
+            [
+                "58e76f9cd60c913c"
+            ]
+        ]
+    },
+    {
+        "id": "58e76f9cd60c913c",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "57383ef85f904023",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "energy charged",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 700,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "1eb8ad38d4736ee8",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "billValue",
+        "func": "const bill = flow.get('bill');\nreturn {payload: bill.value};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 900,
+        "wires": [
+            [
+                "60b13fdb9af300fc"
+            ]
+        ]
+    },
+    {
+        "id": "60b13fdb9af300fc",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "57383ef85f904023",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "bill value",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "6f43443aeb8ace08",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "client",
+        "func": "const bill = flow.get('bill');\nreturn {payload: bill.username}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 820,
+        "wires": [
+            [
+                "fcb46bbd0403ae43"
+            ]
+        ]
+    },
+    {
+        "id": "fcb46bbd0403ae43",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "57383ef85f904023",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "client",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "925c79710f12ab65",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "date",
+        "func": "const bill = flow.get('bill');\nlet date = bill.date;\n\nif (date !== '') {\n    const day = String(date.getDate()).padStart(2, '0');\n    const month = String(date.getMonth() + 1).padStart(2, '0');\n    const year = date.getFullYear();\n    return {payload: `${day}/${month}/${year}`}\n} else {\n    return {payload: ''};\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 780,
+        "wires": [
+            [
+                "7c4b651f27a5e001"
+            ]
+        ]
+    },
+    {
+        "id": "7c4b651f27a5e001",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "57383ef85f904023",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "date",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "d8259b9484477a0a",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "period",
+        "func": "const bill = flow.get('bill');\nreturn {payload: bill.period};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 940,
+        "wires": [
+            [
+                "4221886c35703e80"
+            ]
+        ]
+    },
+    {
+        "id": "4221886c35703e80",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "57383ef85f904023",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "period",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "39cec44df78e8bd9",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "billValue",
+        "func": "const bill = flow.get('bill');\nreturn {payload: bill.pricePerEnergy};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 980,
+        "wires": [
+            [
+                "416e5df97a1917e8"
+            ]
+        ]
+    },
+    {
+        "id": "416e5df97a1917e8",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "57383ef85f904023",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "price per energy",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 700,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "8d642697a2c7ad7d",
+        "type": "ui_button",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "group": "57383ef85f904023",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "pay",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 430,
+        "y": 1020,
+        "wires": [
+            [
+                "61b9152d714a0fe1"
+            ]
+        ]
+    },
+    {
+        "id": "61b9152d714a0fe1",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "pay",
+        "func": "const bills = global.get('bills');\nconst bill = flow.get('bill');\n\nbills.push(bill);\nglobal.set('bills', bills);\n\nreturn {payload: true};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1020,
+        "wires": [
+            [
+                "851467e7f0f8b0e5",
+                "324c84c38dbe7afa"
+            ]
+        ]
+    },
+    {
+        "id": "851467e7f0f8b0e5",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "reset",
+        "func": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0\n}\n\nconst new_bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', new_bill);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "324c84c38dbe7afa",
+        "type": "debug",
+        "z": "c0c87725f2b6a546",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "cfebb2f4e348e767",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "f68e84da2add074e",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "8b6709114939f29d",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "status",
+        "func": "const station = flow.get('station');\n\nif (station.enable) return {payload: 'CHARGING'};\nelse return {payload: 'NOT CHARGING'}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "cfebb2f4e348e767"
+            ]
+        ]
+    },
+    {
+        "id": "69dd362a209da38d",
+        "type": "ui_chart",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "group": "f68e84da2add074e",
+        "order": 5,
+        "width": 6,
+        "height": 4,
+        "label": "car energy",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 790,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af0c8a794d5177b2",
+        "type": "ui_chart",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "group": "f68e84da2add074e",
+        "order": 6,
+        "width": 6,
+        "height": 4,
+        "label": "charger power",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 800,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b51fdb569db729a7",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "reset energy",
+        "func": "return [{payload: []}, {payload: []}];",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 320,
+        "wires": [
+            [
+                "69dd362a209da38d",
+                "af0c8a794d5177b2"
+            ]
+        ]
+    },
+    {
+        "id": "c0263d731e9802ec",
+        "type": "inject",
+        "z": "7ff87b268efdbf78",
+        "name": "engine",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "88f3c4b2dae01765",
+                "c172dd7af0456c20",
+                "9d9c13f527edd19b",
+                "cd405fe223a85f12",
+                "8107458de6c4e257",
+                "44bece713a1ee3f4",
+                "67529314c36819b7",
+                "70934acfce6f4c46",
+                "7ddaaeeb31ea453f",
+                "d336b934449f7bb6",
+                "08c1f0ee3422537b",
+                "2c820c776970a207"
+            ]
+        ]
+    },
+    {
+        "id": "88f3c4b2dae01765",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "revenue",
+        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\nreturn { payload: totalValue };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "4bf2440a77dc2508"
+            ]
+        ]
+    },
+    {
+        "id": "4bf2440a77dc2508",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "d9d99228efd78e53",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "revenue",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 660,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "c172dd7af0456c20",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "number of bills",
+        "func": "let bills = global.get('bills');\n\nif (bills) return {payload: bills.length};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "5f4c6bc68d43055e"
+            ]
+        ]
+    },
+    {
+        "id": "5f4c6bc68d43055e",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "d9d99228efd78e53",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "number of bills",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9d9c13f527edd19b",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "ticket",
+        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\n\nreturn { payload: (totalValue / bills.length || 0).toFixed(2) };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "b5444fad3751ddc6"
+            ]
+        ]
+    },
+    {
+        "id": "b5444fad3751ddc6",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "d9d99228efd78e53",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "ticket",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 650,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cd405fe223a85f12",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "number of clients",
+        "func": "const bills = global.get('bills');\n\nlet names = bills.map(b => b.username);\nlet uniqueNames = [...new Set(names)];\nlet numUniqueNames = uniqueNames.length;\n\nreturn {payload: numUniqueNames};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 240,
+        "wires": [
+            [
+                "441ad453b4bccbd2"
+            ]
+        ]
+    },
+    {
+        "id": "441ad453b4bccbd2",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "d9d99228efd78e53",
+        "order": 7,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "number of clients",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 690,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "8107458de6c4e257",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "ltv",
+        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\n\nlet names = bills.map(b => b.username);\nlet uniqueNames = [...new Set(names)];\nlet numUniqueNames = uniqueNames.length;\n\nreturn {payload: (totalValue/numUniqueNames || 0).toFixed(2)};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "f9a627403eaf37a4"
+            ]
+        ]
+    },
+    {
+        "id": "f9a627403eaf37a4",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "d9d99228efd78e53",
+        "order": 6,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "ltv",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 650,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "44bece713a1ee3f4",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "morning revenue",
+        "func": "let bills = global.get('bills');\n\nlet morningBills = bills.filter(bill => bill.period === 'morning');\nlet sum = morningBills.reduce((accumulator, bill) => accumulator + bill.value, 0);\n\nreturn {payload: sum};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 380,
+        "wires": [
+            [
+                "22186c3764c0abe9"
+            ]
+        ]
+    },
+    {
+        "id": "22186c3764c0abe9",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "morning revenue",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 690,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "67529314c36819b7",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "afternoon revenue",
+        "func": "let bills = global.get('bills');\n\nlet afternoonBills = bills.filter(bill => bill.period === 'afternoon');\nlet sum = afternoonBills.reduce((accumulator, bill) => accumulator + bill.value, 0);\n\nreturn {payload: sum};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 420,
+        "wires": [
+            [
+                "f4e2e4d12494cb3b"
+            ]
+        ]
+    },
+    {
+        "id": "f4e2e4d12494cb3b",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "afternoon revenue",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 690,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "70934acfce6f4c46",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "night revenue",
+        "func": "let bills = global.get('bills');\n\nlet nightBills = bills.filter(bill => bill.period === 'night');\nlet sum = nightBills.reduce((accumulator, bill) => accumulator + bill.value, 0);\n\nreturn {payload: sum};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 460,
+        "wires": [
+            [
+                "6d7c7a8733fd045e"
+            ]
+        ]
+    },
+    {
+        "id": "6d7c7a8733fd045e",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "night revenue",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7ddaaeeb31ea453f",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "morning bills",
+        "func": "let bills = global.get('bills');\n\nlet morningBills = bills.filter(bill => bill.period === 'morning');\nreturn {payload: morningBills.length};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "11955ead96ad76db"
+            ]
+        ]
+    },
+    {
+        "id": "11955ead96ad76db",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "morning bills",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d336b934449f7bb6",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "afternoon bills",
+        "func": "let bills = global.get('bills');\n\nlet afternoonBills = bills.filter(bill => bill.period === 'afternoon');\n\nreturn {payload: afternoonBills.length};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 580,
+        "wires": [
+            [
+                "01d0f394846133df"
+            ]
+        ]
+    },
+    {
+        "id": "01d0f394846133df",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "afternoon bills",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "08c1f0ee3422537b",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "night bills",
+        "func": "let bills = global.get('bills');\n\nlet nightBills = bills.filter(bill => bill.period === 'night');\nreturn { payload: nightBills.length};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 620,
+        "wires": [
+            [
+                "5c10646893dcef81"
+            ]
+        ]
+    },
+    {
+        "id": "5c10646893dcef81",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "night bills",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 660,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2c820c776970a207",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "prices",
+        "func": "let prices = global.get('prices');\n\nreturn {payload: prices};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 720,
+        "wires": [
+            [
+                "6d884e9fcee69b29",
+                "c338f0c4a7421107",
+                "59c6f30b78e2a491"
+            ]
+        ]
+    },
+    {
+        "id": "6d884e9fcee69b29",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "b17c97df988fc2a7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "morning",
+        "format": "{{msg.payload[0]}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 660,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "c338f0c4a7421107",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "b17c97df988fc2a7",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "afternoon",
+        "format": "{{msg.payload[1]}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 660,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "59c6f30b78e2a491",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "b17c97df988fc2a7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "night",
+        "format": "{{msg.payload[2]}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 650,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "881f0f0f678cacb0",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "",
+        "label": "morning",
+        "tooltip": "",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 880,
+        "wires": [
+            [
+                "256d82a8f5d34866"
+            ]
+        ]
+    },
+    {
+        "id": "de0d816faa3aeea1",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "",
+        "label": "afternoon",
+        "tooltip": "",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 920,
+        "wires": [
+            [
+                "c64cfdbaac9d1fd2"
+            ]
+        ]
+    },
+    {
+        "id": "ffd318c01134e689",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "",
+        "label": "night",
+        "tooltip": "",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 410,
+        "y": 960,
+        "wires": [
+            [
+                "c13482805f1a02c4"
+            ]
+        ]
+    },
+    {
+        "id": "256d82a8f5d34866",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newMorningPrice",
+        "func": "flow.set('newMorningPrice', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c64cfdbaac9d1fd2",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newAfternoonPrice",
+        "func": "flow.set('newAfternoonPrice', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c13482805f1a02c4",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newNightPrice",
+        "func": "flow.set('newNightPrice', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "65b338aba5831dd3",
+        "type": "ui_button",
+        "z": "7ff87b268efdbf78",
+        "name": "",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "set new prices",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 440,
+        "y": 1000,
+        "wires": [
+            [
+                "a563fef8d4ebad24"
+            ]
+        ]
+    },
+    {
+        "id": "a563fef8d4ebad24",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "set new prices",
+        "func": "let morningPrice = flow.get('newMorningPrice');\nlet afternoonPrice = flow.get('newAfternoonPrice');\nlet nightPrice = flow.get('newNightPrice');\n\nlet currentPrices = global.get('prices');\n\nif (morningPrice === undefined) morningPrice = currentPrices[0];\nif (afternoonPrice === undefined) afternoonPrice = currentPrices[1];\nif (nightPrice === undefined) nightPrice = currentPrices[2];\n\nglobal.set('prices', [morningPrice, afternoonPrice, nightPrice]);\n\nreturn {payload: morningPrice};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1000,
+        "wires": [
+            [
+                "87b18e53bd2fcf29"
+            ]
+        ]
+    },
+    {
+        "id": "87b18e53bd2fcf29",
+        "type": "debug",
+        "z": "7ff87b268efdbf78",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 1000,
+        "wires": []
     }
 ]
