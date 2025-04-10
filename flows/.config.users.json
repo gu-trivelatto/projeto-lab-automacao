@@ -15,6 +15,14 @@
             "tours": {
                 "welcome": "4.0.9-git"
             }
+        },
+        "debug": {
+            "filter": "filterAll",
+            "filteredNodes": [
+                "e3af2a4e08aa6446",
+                "44fec81bb655a554",
+                "5a342dc629f19d68"
+            ]
         }
     }
 }

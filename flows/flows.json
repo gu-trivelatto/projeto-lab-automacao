@@ -180,104 +180,6 @@
         "idle": 1000
     },
     {
-        "id": "f3c5518521d994b4",
-        "type": "ui_base",
-        "theme": {
-            "name": "theme-dark",
-            "lightTheme": {
-                "default": "#0094CE",
-                "baseColor": "#0094CE",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
-            },
-            "darkTheme": {
-                "default": "#097479",
-                "baseColor": "#6fc0db",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": true,
-                "reset": false
-            },
-            "customTheme": {
-                "name": "Untitled Theme 1",
-                "default": "#4B7930",
-                "baseColor": "#1d4e89",
-                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "reset": false
-            },
-            "themeState": {
-                "base-color": {
-                    "default": "#097479",
-                    "value": "#6fc0db",
-                    "edited": true
-                },
-                "page-titlebar-backgroundColor": {
-                    "value": "#6fc0db",
-                    "edited": false
-                },
-                "page-backgroundColor": {
-                    "value": "#111111",
-                    "edited": true
-                },
-                "page-sidebar-backgroundColor": {
-                    "value": "#ffffff",
-                    "edited": true
-                },
-                "group-textColor": {
-                    "value": "#acdbea",
-                    "edited": true
-                },
-                "group-borderColor": {
-                    "value": "#555555",
-                    "edited": true
-                },
-                "group-backgroundColor": {
-                    "value": "#333333",
-                    "edited": true
-                },
-                "widget-textColor": {
-                    "value": "#eeeeee",
-                    "edited": true
-                },
-                "widget-backgroundColor": {
-                    "value": "#6fc0db",
-                    "edited": true
-                },
-                "widget-borderColor": {
-                    "value": "#333333",
-                    "edited": true
-                },
-                "base-font": {
-                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
-                }
-            },
-            "angularTheme": {
-                "primary": "indigo",
-                "accents": "blue",
-                "warn": "red",
-                "background": "grey",
-                "palette": "light"
-            }
-        },
-        "site": {
-            "name": "Node-RED Dashboard",
-            "hideToolbar": "false",
-            "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
-            "dateFormat": "DD/MM/YYYY",
-            "sizes": {
-                "sx": 48,
-                "sy": 48,
-                "gx": 6,
-                "gy": 6,
-                "cx": 6,
-                "cy": 6,
-                "px": 0,
-                "py": 0
-            }
-        }
-    },
-    {
         "id": "68f25da057c68e6d",
         "type": "ui_tab",
         "name": "polibras",
@@ -630,17 +532,19 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "start",
-        "func": "\nreturn msg;",
+        "func": "msg.time_ranges = [[0,3],[3,6],[6,9],[9,12],[12,15],[15,18],[18,21],[21,24]];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('prices', [1, 2, 3]);",
+        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('prices', [1.5, 1.8, 2.1]);",
         "finalize": "",
         "libs": [],
         "x": 290,
         "y": 120,
         "wires": [
-            []
+            [
+                "e0da2ff71541853a"
+            ]
         ]
     },
     {
@@ -669,7 +573,6 @@
         "wires": [
             [
                 "85e50fb9af8b7256",
-                "8b62aaf15d0e285a",
                 "d8f72287e5ae31c8",
                 "b9e14ec19f763fe9",
                 "cafdc93db196d541",
@@ -688,7 +591,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "generator",
-        "func": "const station = flow.get('station');\nconst user = flow.get('user');\nconst bill = flow.get('bill');\n\nif (station.enable) {\n    const rnd = Math.floor(Math.random() * 10) + 1;\n    \n    user.remainingEnergy += (rnd * 2);\n    \n    station.power = rnd;\n    station.transferedEnergy += (rnd * 2);\n\n    bill.chargedEnergy += (rnd * 2);\n    bill.value = bill.chargedEnergy * bill.pricePerEnergy;\n\n    flow.set('station', station);\n    flow.set('user', user);\n    flow.set('bill', bill);\n}",
+        "func": "const station = flow.get('station');\nconst user = flow.get('user');\nconst bill = flow.get('bill');\n\nif (station.enable && msg.payload.power) {\n    const power = msg.payload.power;\n    const transferredEnergy = Math.min(power, (user.totalEnergy - user.remainingEnergy));\n\n    user.remainingEnergy += transferredEnergy;\n    \n    station.power = power;\n    station.transferedEnergy += transferredEnergy;\n\n    bill.chargedEnergy += transferredEnergy;\n    bill.value = bill.chargedEnergy * bill.pricePerEnergy;\n\n    flow.set('station', station);\n    flow.set('user', user);\n    flow.set('bill', bill);\n}\n\nreturn user",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -706,7 +609,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "power",
-        "func": "const station = flow.get('station');\n\nif (station.enable)\n    return {payload: station.power};\nelse\n    return {payload: 0};\n",
+        "func": "const station = flow.get('station');\n\nif (station.enable)\n    return { payload: Math.round(msg.payload.power * 100) / 100 };\nelse\n    return {payload: 0};\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -731,10 +634,14 @@
         "width": 6,
         "height": 1,
         "name": "",
-        "label": "charger power",
+        "label": "Charger power",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 700,
         "y": 440,
         "wires": []
@@ -748,10 +655,14 @@
         "width": 6,
         "height": 1,
         "name": "",
-        "label": "car energy",
+        "label": "Car energy",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 690,
         "y": 480,
         "wires": []
@@ -761,7 +672,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "car energy",
-        "func": "const user = flow.get('user');\n\nreturn {payload: user.remainingEnergy, topic: 'car energy'};\n",
+        "func": "const user = flow.get('user');\n\nreturn {payload: Math.round(user.remainingEnergy* 100) / 100, topic: 'car energy'};\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -891,7 +802,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "car total energy",
-        "func": "return {payload: flow.get('user').totalEnergy, topic: 'total energy'};",
+        "func": "return {payload: Math.round(flow.get('user').totalEnergy * 100) / 100, topic: 'total energy'};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -916,10 +827,14 @@
         "width": 6,
         "height": 1,
         "name": "",
-        "label": "car total energy",
+        "label": "Car total energy",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 700,
         "y": 520,
         "wires": []
@@ -929,7 +844,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "chargedEnergy",
-        "func": "const bill = flow.get('bill');\nreturn {payload: bill.chargedEnergy};",
+        "func": "const bill = flow.get('bill');\nreturn {payload: Math.round(bill.chargedEnergy * 100) / 100};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -953,10 +868,14 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "energy charged",
+        "label": "Energy charged",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 700,
         "y": 860,
         "wires": []
@@ -966,7 +885,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "billValue",
-        "func": "const bill = flow.get('bill');\nreturn {payload: bill.value};",
+        "func": "const bill = flow.get('bill');\nconst value = Math.round(bill.value * 100) / 100;\nreturn {payload: `R$${value.toFixed(2)}`};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -990,10 +909,14 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "bill value",
+        "label": "Bill value",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 680,
         "y": 900,
         "wires": []
@@ -1027,10 +950,14 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "client",
+        "label": "Client",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 670,
         "y": 820,
         "wires": []
@@ -1064,10 +991,14 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "date",
+        "label": "Date",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 670,
         "y": 780,
         "wires": []
@@ -1101,10 +1032,14 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "period",
+        "label": "Period",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 670,
         "y": 940,
         "wires": []
@@ -1114,7 +1049,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "billValue",
-        "func": "const bill = flow.get('bill');\nreturn {payload: bill.pricePerEnergy};",
+        "func": "const bill = flow.get('bill');\nconst price = Math.round(bill.pricePerEnergy * 100) / 100;\nreturn {payload: `R$${price.toFixed(2)}`};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1138,11 +1073,15 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "price per energy",
+        "label": "Energy price (per kWh)",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 700,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 730,
         "y": 980,
         "wires": []
     },
@@ -1238,10 +1177,14 @@
         "width": 6,
         "height": 1,
         "name": "",
-        "label": "status",
+        "label": "Status",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 670,
         "y": 560,
         "wires": []
@@ -1275,7 +1218,7 @@
         "order": 5,
         "width": 6,
         "height": 4,
-        "label": "car energy",
+        "label": "Car energy",
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
@@ -1319,7 +1262,7 @@
         "order": 6,
         "width": 6,
         "height": 4,
-        "label": "charger power",
+        "label": "Charger power",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -1373,6 +1316,128 @@
                 "69dd362a209da38d",
                 "af0c8a794d5177b2"
             ]
+        ]
+    },
+    {
+        "id": "ee674fcef7caa146",
+        "type": "mqtt in",
+        "z": "c0c87725f2b6a546",
+        "name": "Dados JE05",
+        "topic": "garsoft/dev/je05/dados",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2fa5a786019761a6",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 90,
+        "y": 400,
+        "wires": [
+            [
+                "df896173bdf6ed11"
+            ]
+        ]
+    },
+    {
+        "id": "df896173bdf6ed11",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "Consumo em kWh",
+        "func": "// consumo mockado através da potência do lab\n// escalando o valor para atingir algo próximo a 4kW\nmsg.payload.power = msg.payload.DATA.PT / 80;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "8b62aaf15d0e285a",
+                "85e50fb9af8b7256"
+            ]
+        ]
+    },
+    {
+        "id": "8384e50c82fa8855",
+        "type": "postgrestor",
+        "z": "c0c87725f2b6a546",
+        "name": "Histórico de Dados - SQL",
+        "query": "SELECT * FROM demanda;",
+        "postgresDB": "6c39d5fa539d0b1b",
+        "output": true,
+        "outputs": 1,
+        "x": 630,
+        "y": 120,
+        "wires": [
+            [
+                "d3917322a9c8b6ec"
+            ]
+        ]
+    },
+    {
+        "id": "e0da2ff71541853a",
+        "type": "split",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "time_ranges",
+        "x": 430,
+        "y": 120,
+        "wires": [
+            [
+                "8384e50c82fa8855"
+            ]
+        ]
+    },
+    {
+        "id": "d3917322a9c8b6ec",
+        "type": "join",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 830,
+        "y": 120,
+        "wires": [
+            [
+                "22bd5c2fbc969f63"
+            ]
+        ]
+    },
+    {
+        "id": "22bd5c2fbc969f63",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 120,
+        "wires": [
+            []
         ]
     },
     {

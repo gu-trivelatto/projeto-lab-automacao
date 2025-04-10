@@ -11,7 +11,18 @@
                 "view-node-show-label": true,
                 "view-show-tips": true,
                 "view-show-welcome-tours": true
+            },
+            "tours": {
+                "welcome": "4.0.9-git"
             }
+        },
+        "debug": {
+            "filter": "filterSelected",
+            "filteredNodes": [
+                "e3af2a4e08aa6446",
+                "44fec81bb655a554",
+                "5a342dc629f19d68"
+            ]
         }
     }
 }
