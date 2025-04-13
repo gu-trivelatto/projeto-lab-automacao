@@ -685,25 +685,5 @@
                 "file": "/home/gutriv/poli/automacao/projeto/node_modules/postgrestor/postgrestor.js"
             }
         }
-    },
-    "node-red-dx-postgresql": {
-        "name": "node-red-dx-postgresql",
-        "version": "0.0.2",
-        "local": false,
-        "user": false,
-        "nodes": {
-            "pg": {
-                "name": "pg",
-                "types": [
-                    "pg",
-                    "pgConfig"
-                ],
-                "enabled": true,
-                "local": false,
-                "user": false,
-                "module": "node-red-dx-postgresql",
-                "file": "/home/gutriv/poli/automacao/projeto/node_modules/node-red-dx-postgresql/pg.js"
-            }
-        }
     }
 }

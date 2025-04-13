@@ -3,7 +3,7 @@
         "id": "b058e3d3268403eb",
         "type": "tab",
         "label": "Fluxo 1",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -133,7 +133,7 @@
             }
         },
         "site": {
-            "name": "Node-RED Dashboard",
+            "name": "Polibras",
             "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "false",
@@ -182,7 +182,7 @@
     {
         "id": "68f25da057c68e6d",
         "type": "ui_tab",
-        "name": "polibras",
+        "name": "Polibras",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
@@ -190,29 +190,29 @@
     {
         "id": "0d6348cd3c581ac5",
         "type": "ui_group",
-        "name": "user",
+        "name": "Cliente",
         "tab": "68f25da057c68e6d",
         "order": 2,
         "disp": true,
-        "width": 5,
+        "width": "7",
         "collapse": false,
         "className": ""
     },
     {
         "id": "f68e84da2add074e",
         "type": "ui_group",
-        "name": "charging data",
+        "name": "Dados de Carregamento",
         "tab": "68f25da057c68e6d",
         "order": 3,
         "disp": true,
-        "width": 12,
+        "width": "14",
         "collapse": false,
         "className": ""
     },
     {
         "id": "57383ef85f904023",
         "type": "ui_group",
-        "name": "bill",
+        "name": "Conta",
         "tab": "68f25da057c68e6d",
         "order": 4,
         "disp": true,
@@ -223,7 +223,7 @@
     {
         "id": "4151d7703cfd2b05",
         "type": "ui_tab",
-        "name": "polibras - management",
+        "name": "Polibras - Gerenciamento",
         "icon": "dashboard",
         "disabled": false,
         "hidden": false
@@ -231,18 +231,18 @@
     {
         "id": "d9d99228efd78e53",
         "type": "ui_group",
-        "name": "general info",
+        "name": "Informação Geral",
         "tab": "4151d7703cfd2b05",
         "order": 1,
         "disp": true,
-        "width": 9,
+        "width": "4",
         "collapse": false,
         "className": ""
     },
     {
         "id": "812c9f59fa48c699",
         "type": "ui_group",
-        "name": "revenue",
+        "name": "Receita",
         "tab": "4151d7703cfd2b05",
         "order": 2,
         "disp": true,
@@ -253,95 +253,59 @@
     {
         "id": "0a04b855efa1e24e",
         "type": "ui_group",
-        "name": "bills",
+        "name": "Contas",
         "tab": "4151d7703cfd2b05",
         "order": 3,
         "disp": true,
-        "width": 6,
+        "width": "4",
         "collapse": false,
         "className": ""
     },
     {
         "id": "b17c97df988fc2a7",
         "type": "ui_group",
-        "name": "prices",
+        "name": "Preços",
         "tab": "4151d7703cfd2b05",
-        "order": 4,
+        "order": 5,
         "disp": true,
-        "width": 6,
+        "width": "9",
         "collapse": false,
         "className": ""
     },
     {
         "id": "7eb4ad1bb9f8ef34",
         "type": "ui_group",
-        "name": "new prices",
+        "name": "Novos preços",
         "tab": "4151d7703cfd2b05",
-        "order": 5,
+        "order": 6,
         "disp": true,
-        "width": 6,
+        "width": "9",
         "collapse": false,
         "className": ""
     },
     {
-        "id": "636338aa3e615159",
-        "type": "ui_spacer",
-        "z": "7ff87b268efdbf78",
-        "name": "spacer",
-        "group": "d9d99228efd78e53",
-        "order": 2,
-        "width": 1,
-        "height": 1
+        "id": "52bbcde4b86dc022",
+        "type": "pgConfig",
+        "name": "Lab Automação",
+        "host": "143.107.102.8",
+        "port": 5432,
+        "dbname": "data-energia",
+        "max": 10,
+        "idleTimeout": 1000,
+        "connectionTimeout": 10000,
+        "user": "leitor",
+        "password": "garsoftData2024"
     },
     {
-        "id": "a6e4fd0925f95c20",
-        "type": "ui_spacer",
-        "z": "7ff87b268efdbf78",
-        "name": "spacer",
-        "group": "d9d99228efd78e53",
-        "order": 5,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "547a72937277fb12",
-        "type": "ui_spacer",
-        "z": "7ff87b268efdbf78",
-        "name": "spacer",
-        "group": "d9d99228efd78e53",
-        "order": 8,
-        "width": 5,
-        "height": 1
-    },
-    {
-        "id": "62e692277e81db90",
-        "type": "ui_spacer",
-        "z": "7ff87b268efdbf78",
-        "name": "spacer",
-        "group": "0a04b855efa1e24e",
-        "order": 2,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "04d52c4b34ef65b9",
-        "type": "ui_spacer",
-        "z": "7ff87b268efdbf78",
-        "name": "spacer",
-        "group": "0a04b855efa1e24e",
+        "id": "5ff7b2eec84a8938",
+        "type": "ui_group",
+        "name": "Energia",
+        "tab": "4151d7703cfd2b05",
         "order": 4,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "972bfb65d25c1fbc",
-        "type": "ui_spacer",
-        "z": "7ff87b268efdbf78",
-        "name": "spacer",
-        "group": "0a04b855efa1e24e",
-        "order": 6,
-        "width": 2,
-        "height": 1
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "098f0eb02b5e1018",
@@ -532,15 +496,15 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "start",
-        "func": "\nreturn msg;",
+        "func": "",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('prices', [1.5, 1.8, 2.1]);",
+        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0,\n    clientType: ''\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0,\n    chargerType: '',\n    powerDivider: 70\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('base_prices', {\n    \"AC_LENTO\": [1.2, 1.8],\n    \"AC_RAPIDO\": [1.8, 2.5],\n    \"DC_RAPIDO\": [2.5, 4]\n});\nglobal.set('base_time_prices', [])",
         "finalize": "",
         "libs": [],
-        "x": 290,
-        "y": 120,
+        "x": 590,
+        "y": 160,
         "wires": [
             []
         ]
@@ -566,8 +530,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 280,
-        "y": 400,
+        "x": 640,
+        "y": 600,
         "wires": [
             [
                 "85e50fb9af8b7256",
@@ -578,7 +542,6 @@
                 "1eb8ad38d4736ee8",
                 "6f43443aeb8ace08",
                 "925c79710f12ab65",
-                "d8259b9484477a0a",
                 "39cec44df78e8bd9",
                 "8b6709114939f29d"
             ]
@@ -596,8 +559,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 400,
+        "x": 800,
+        "y": 600,
         "wires": [
             []
         ]
@@ -614,8 +577,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 440,
+        "x": 790,
+        "y": 640,
         "wires": [
             [
                 "72be1021655bc916",
@@ -629,19 +592,19 @@
         "z": "c0c87725f2b6a546",
         "group": "f68e84da2add074e",
         "order": 2,
-        "width": 6,
+        "width": "7",
         "height": 1,
         "name": "",
-        "label": "Charger power",
-        "format": "{{msg.payload}}",
+        "label": "Potência de Carregamento",
+        "format": "{{msg.payload}} kW",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 700,
-        "y": 440,
+        "x": 1100,
+        "y": 640,
         "wires": []
     },
     {
@@ -650,19 +613,19 @@
         "z": "c0c87725f2b6a546",
         "group": "f68e84da2add074e",
         "order": 3,
-        "width": 6,
+        "width": "7",
         "height": 1,
         "name": "",
-        "label": "Car energy",
-        "format": "{{msg.payload}}",
+        "label": "Energia no Carro",
+        "format": "{{msg.payload}} kWh",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 690,
-        "y": 480,
+        "x": 1070,
+        "y": 680,
         "wires": []
     },
     {
@@ -677,8 +640,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 480,
+        "x": 810,
+        "y": 680,
         "wires": [
             [
                 "086daf833efc0895",
@@ -698,8 +661,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 220,
+        "x": 830,
+        "y": 260,
         "wires": [
             []
         ]
@@ -709,12 +672,12 @@
         "type": "ui_text_input",
         "z": "c0c87725f2b6a546",
         "name": "",
-        "label": "name",
+        "label": "Nome",
         "tooltip": "",
         "group": "0d6348cd3c581ac5",
         "order": 1,
-        "width": 0,
-        "height": 0,
+        "width": "7",
+        "height": "1",
         "passthru": true,
         "mode": "text",
         "delay": 300,
@@ -722,8 +685,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 290,
-        "y": 220,
+        "x": 590,
+        "y": 260,
         "wires": [
             [
                 "fadf2a18085299a4"
@@ -736,11 +699,11 @@
         "z": "c0c87725f2b6a546",
         "name": "",
         "group": "0d6348cd3c581ac5",
-        "order": 2,
-        "width": 0,
-        "height": 0,
+        "order": 5,
+        "width": "7",
+        "height": "1",
         "passthru": false,
-        "label": "start",
+        "label": "Carregar",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -750,12 +713,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 290,
-        "y": 260,
+        "x": 260,
+        "y": 460,
         "wires": [
             [
-                "6dd2a349b5ebd5de",
-                "b51fdb569db729a7"
+                "66136687595b7255"
             ]
         ]
     },
@@ -764,17 +726,19 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "start charging",
-        "func": "function getRandomDateLastMonth() {\n    const today = new Date();\n    const firstDayLastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);\n    const lastDayLastMonth = new Date(today.getFullYear(), today.getMonth(), 0);\n\n    const randomTime = firstDayLastMonth.getTime() + Math.random() * (lastDayLastMonth.getTime() - firstDayLastMonth.getTime());\n    return new Date(randomTime);\n}\n\nconst user = flow.get('user');\nconst station = flow.get('station');\nconst bill = flow.get('bill');\n\nuser.name = flow.get('nameInput');\nlet rnd = Math.floor(Math.random() * 10) + 1;\nuser.remainingEnergy = rnd;\nrnd = Math.floor(Math.random() * (120 - 100 + 1)) + 100;\nuser.totalEnergy = rnd;\n\nstation.enable = true;\nstation.transferedEnergy = 0;\nstation.power = 0;\n\nbill.date = getRandomDateLastMonth();\nbill.username = flow.get('nameInput');\nbill.chargedEnergy = 0;\nbill.value = 0;\nrnd = Math.floor(Math.random() * 3);\nbill.period = ['morning', 'afternoon', 'night'][rnd];\nbill.pricePerEnergy = global.get('prices')[rnd];",
+        "func": "function getRandomDateLastMonth() {\n    const today = new Date();\n    const firstDayLastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);\n    const lastDayLastMonth = new Date(today.getFullYear(), today.getMonth(), 0);\n\n    const randomTime = firstDayLastMonth.getTime() + Math.random() * (lastDayLastMonth.getTime() - firstDayLastMonth.getTime());\n    return new Date(randomTime);\n}\n\nconst user = flow.get('user');\nconst station = flow.get('station');\nconst bill = flow.get('bill');\nconst baseTimePrice = global.get('base_time_prices');\n\nuser.name = flow.get('nameInput');\nlet rnd = Math.floor(Math.random() * 10) + 1;\nuser.remainingEnergy = rnd;\nrnd = Math.floor(Math.random() * (120 - 100 + 1)) + 100;\nuser.totalEnergy = rnd;\n\nstation.enable = true;\nstation.transferedEnergy = 0;\nstation.power = 0;\n\nbill.date = getRandomDateLastMonth();\nbill.username = flow.get('nameInput');\nbill.chargedEnergy = 0;\nbill.value = 0;\n\nreturn { payload: \"\" }",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 260,
+        "x": 840,
+        "y": 460,
         "wires": [
-            []
+            [
+                "6a59374d70f9cfbf"
+            ]
         ]
     },
     {
@@ -789,8 +753,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 470,
-        "y": 600,
+        "x": 830,
+        "y": 800,
         "wires": [
             []
         ]
@@ -807,8 +771,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 520,
+        "x": 820,
+        "y": 720,
         "wires": [
             [
                 "f2dd99add1175293",
@@ -822,19 +786,19 @@
         "z": "c0c87725f2b6a546",
         "group": "f68e84da2add074e",
         "order": 1,
-        "width": 6,
+        "width": "7",
         "height": 1,
         "name": "",
-        "label": "Car total energy",
-        "format": "{{msg.payload}}",
+        "label": "Capacidade de Energia do Carro",
+        "format": "{{msg.payload}} kWh",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 700,
-        "y": 520,
+        "x": 1120,
+        "y": 720,
         "wires": []
     },
     {
@@ -849,8 +813,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 860,
+        "x": 820,
+        "y": 1060,
         "wires": [
             [
                 "58e76f9cd60c913c"
@@ -866,16 +830,16 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Energy charged",
-        "format": "{{msg.payload}}",
+        "label": "Energia Carregada",
+        "format": "{{msg.payload}} kWh",
         "layout": "row-spread",
         "className": "",
         "style": false,
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 700,
-        "y": 860,
+        "x": 1070,
+        "y": 1060,
         "wires": []
     },
     {
@@ -890,8 +854,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 900,
+        "x": 800,
+        "y": 1100,
         "wires": [
             [
                 "60b13fdb9af300fc"
@@ -907,7 +871,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Bill value",
+        "label": "Valor da Conta",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -915,8 +879,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 680,
-        "y": 900,
+        "x": 1060,
+        "y": 1100,
         "wires": []
     },
     {
@@ -931,8 +895,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 820,
+        "x": 790,
+        "y": 1020,
         "wires": [
             [
                 "fcb46bbd0403ae43"
@@ -948,7 +912,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Client",
+        "label": "Cliente",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -956,8 +920,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 670,
-        "y": 820,
+        "x": 1040,
+        "y": 1020,
         "wires": []
     },
     {
@@ -965,15 +929,15 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "date",
-        "func": "const bill = flow.get('bill');\nlet date = bill.date;\n\nif (date !== '') {\n    const day = String(date.getDate()).padStart(2, '0');\n    const month = String(date.getMonth() + 1).padStart(2, '0');\n    const year = date.getFullYear();\n    return {payload: `${day}/${month}/${year}`}\n} else {\n    return {payload: ''};\n}\n",
+        "func": "const bill = flow.get('bill');\nlet date = bill.date;\n\nif (date !== '') {\n    const day = String(date.getDate()).padStart(2, '0');\n    const month = String(date.getMonth() + 1).padStart(2, '0');\n    const year = date.getFullYear();\n    const hour = String(date.getHours()).padStart(2, '0');\n    const minute = String(date.getMinutes()).padStart(2, '0');\n\n    return { payload: `${day}/${month}/${year} ${hour}:${minute}` };\n} else {\n    return { payload: '' };\n}\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 780,
+        "x": 790,
+        "y": 980,
         "wires": [
             [
                 "7c4b651f27a5e001"
@@ -989,7 +953,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Date",
+        "label": "Data",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -997,49 +961,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 670,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "d8259b9484477a0a",
-        "type": "function",
-        "z": "c0c87725f2b6a546",
-        "name": "period",
-        "func": "const bill = flow.get('bill');\nreturn {payload: bill.period};",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 940,
-        "wires": [
-            [
-                "4221886c35703e80"
-            ]
-        ]
-    },
-    {
-        "id": "4221886c35703e80",
-        "type": "ui_text",
-        "z": "c0c87725f2b6a546",
-        "group": "57383ef85f904023",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Period",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "style": false,
-        "font": "",
-        "fontSize": "",
-        "color": "#000000",
-        "x": 670,
-        "y": 940,
+        "x": 1030,
+        "y": 980,
         "wires": []
     },
     {
@@ -1054,8 +977,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 440,
-        "y": 980,
+        "x": 800,
+        "y": 1180,
         "wires": [
             [
                 "416e5df97a1917e8"
@@ -1071,7 +994,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Energy price (per kWh)",
+        "label": "Preço da Energia (por kWh)",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -1079,8 +1002,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 730,
-        "y": 980,
+        "x": 1100,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1093,7 +1016,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "pay",
+        "label": "Pagar",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -1103,8 +1026,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 430,
-        "y": 1020,
+        "x": 790,
+        "y": 1220,
         "wires": [
             [
                 "61b9152d714a0fe1"
@@ -1123,12 +1046,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 1020,
+        "x": 1030,
+        "y": 1220,
         "wires": [
             [
-                "851467e7f0f8b0e5",
-                "324c84c38dbe7afa"
+                "851467e7f0f8b0e5"
             ]
         ]
     },
@@ -1137,34 +1059,18 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "reset",
-        "func": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0\n}\n\nconst new_bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', new_bill);",
+        "func": "const user = flow.get('user');\nconst station = flow.get('station');\nconst new_bill = flow.get('bill');\n\nuser.name = '';\nuser.remainingEnergy = 0;\nuser.totalEnergy = 0;\n\nstation.enable = false;\nstation.transferedEnergy = 0;\nstation.power = 0;\n\nnew_bill.date = '';\nnew_bill.username = '';\nnew_bill.chargedEnergy = 0;\nnew_bill.value = 0;\nnew_bill.pricePerEnergy = 0;\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', new_bill);",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 1020,
+        "x": 1170,
+        "y": 1220,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "324c84c38dbe7afa",
-        "type": "debug",
-        "z": "c0c87725f2b6a546",
-        "name": "debug 1",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 820,
-        "y": 1100,
-        "wires": []
     },
     {
         "id": "cfebb2f4e348e767",
@@ -1172,7 +1078,7 @@
         "z": "c0c87725f2b6a546",
         "group": "f68e84da2add074e",
         "order": 4,
-        "width": 6,
+        "width": "7",
         "height": 1,
         "name": "",
         "label": "Status",
@@ -1183,8 +1089,8 @@
         "font": "",
         "fontSize": "",
         "color": "#000000",
-        "x": 670,
-        "y": 560,
+        "x": 1030,
+        "y": 760,
         "wires": []
     },
     {
@@ -1192,15 +1098,15 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "status",
-        "func": "const station = flow.get('station');\n\nif (station.enable) return {payload: 'CHARGING'};\nelse return {payload: 'NOT CHARGING'}",
+        "func": "const station = flow.get('station');\n\nif (station.enable) return {payload: 'CARREGANDO'};\nelse return {payload: 'DISPONÍVEL'}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 430,
-        "y": 560,
+        "x": 790,
+        "y": 760,
         "wires": [
             [
                 "cfebb2f4e348e767"
@@ -1214,9 +1120,9 @@
         "name": "",
         "group": "f68e84da2add074e",
         "order": 5,
-        "width": 6,
-        "height": 4,
-        "label": "Car energy",
+        "width": "7",
+        "height": "6",
+        "label": "Energia do Carro (kWh)",
         "chartType": "line",
         "legend": "true",
         "xformat": "HH:mm:ss",
@@ -1245,8 +1151,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 790,
-        "y": 720,
+        "x": 1190,
+        "y": 920,
         "wires": [
             []
         ]
@@ -1258,9 +1164,9 @@
         "name": "",
         "group": "f68e84da2add074e",
         "order": 6,
-        "width": 6,
-        "height": 4,
-        "label": "Charger power",
+        "width": "7",
+        "height": "6",
+        "label": "Potência de Carregamento (kW)",
         "chartType": "line",
         "legend": "false",
         "xformat": "HH:mm:ss",
@@ -1289,8 +1195,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 800,
-        "y": 680,
+        "x": 1210,
+        "y": 880,
         "wires": [
             []
         ]
@@ -1307,8 +1213,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
-        "y": 320,
+        "x": 830,
+        "y": 500,
         "wires": [
             [
                 "69dd362a209da38d",
@@ -1329,8 +1235,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 90,
-        "y": 400,
+        "x": 450,
+        "y": 600,
         "wires": [
             [
                 "df896173bdf6ed11"
@@ -1342,19 +1248,435 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "Consumo em kWh",
-        "func": "// consumo mockado através da potência do lab\n// escalando o valor para atingir algo próximo a 4kW\nmsg.payload.power = msg.payload.DATA.PT / 80;\nreturn msg;",
+        "func": "// consumo mockado através da potência do lab\n// com um divisor para atingir a potência do tipo de carregador\nconst station = flow.get('station');\nconst divider = station.powerDivider;\n\nmsg.payload.power = msg.payload.DATA.PT / divider;\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 210,
-        "y": 500,
+        "x": 570,
+        "y": 700,
         "wires": [
             [
                 "8b62aaf15d0e285a",
                 "85e50fb9af8b7256"
+            ]
+        ]
+    },
+    {
+        "id": "e0da2ff71541853a",
+        "type": "split",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload.timeRanges",
+        "x": 1190,
+        "y": 180,
+        "wires": [
+            [
+                "f8b5e52cdc336be8"
+            ]
+        ]
+    },
+    {
+        "id": "d3917322a9c8b6ec",
+        "type": "join",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "useparts": false,
+        "accumulate": false,
+        "timeout": "",
+        "count": "8",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 1270,
+        "y": 360,
+        "wires": [
+            [
+                "22bd5c2fbc969f63"
+            ]
+        ]
+    },
+    {
+        "id": "22bd5c2fbc969f63",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "setPriceRange",
+        "func": "const user = flow.get('user');\nconst station = flow.get('station');\n\nconst basePrices = global.get('base_prices');\nconst discounts = {\n    \"AVULSO\": 1,\n    \"ASSINANTE\": 0.95,\n    \"FROTA\": 0.85\n}\nconst minMax = basePrices[station.chargerType];\n\nconst avgPower = msg.payload\n  .sort((a, b) => a.hora_inicio - b.hora_inicio)\n  .map(item => item.val);;\n\nconst min = Math.min(...avgPower);\nconst max = Math.max(...avgPower);\n\n// Normaliza para o intervalo minMax\nconst timeWindowDiscount = avgPower.map(v => {\n  return (minMax[0] + ((v - min) / (max - min)) * (minMax[1] - minMax[0])) * discounts[user.clientType];\n});\n\nglobal.set('base_time_prices', timeWindowDiscount);\n\nreturn { payload: timeWindowDiscount }",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 420,
+        "wires": [
+            [
+                "fe7afbd2ae4866ec"
+            ]
+        ]
+    },
+    {
+        "id": "864cd1b923b3505e",
+        "type": "ui_dropdown",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "label": "Tipo do Carregador",
+        "tooltip": "",
+        "place": "Selecione",
+        "group": "0d6348cd3c581ac5",
+        "order": 2,
+        "width": "7",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Carregador Lento (AC Nível 2)",
+                "value": "AC_LENTO",
+                "type": "str"
+            },
+            {
+                "label": "Carregador Semi-Rápido (AC Trifásico)",
+                "value": "AC_RAPIDO",
+                "type": "str"
+            },
+            {
+                "label": "Carregador Rápido (DC - CCS)",
+                "value": "DC_RAPIDO",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "786fd9368432062f"
+            ]
+        ]
+    },
+    {
+        "id": "786fd9368432062f",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "checkSelections",
+        "func": "const user = flow.get('user');\nconst station = flow.get('station');\nconst bill = flow.get('bill');\n\nconst divByType = {\n    \"AC_LENTO\": 70,\n    \"AC_RAPIDO\": 24,\n    \"DC_RAPIDO\": 10\n}\n\nif ([\"AC_LENTO\", \"AC_RAPIDO\", \"DC_RAPIDO\"].includes(msg.payload)) {\n    station.chargerType = msg.payload;\n    station.powerDivider = divByType[msg.payload]\n    flow.set('station', station);\n} else if ([\"AVULSO\", \"ASSINANTE\", \"FROTA\"].includes(msg.payload)) {\n    user.clientType = msg.payload;\n    flow.set('user', user);\n}\n\nif (user.clientType === '' || station.chargerType === '' || bill.date === '') {\n    return { payload: false}\n} else {\n    return { payload: true }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 300,
+        "wires": [
+            [
+                "e23bc1ca7ac4763b"
+            ]
+        ]
+    },
+    {
+        "id": "0240c8e5188d2754",
+        "type": "ui_dropdown",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "label": "Tipo de Cliente",
+        "tooltip": "",
+        "place": "Selecione",
+        "group": "0d6348cd3c581ac5",
+        "order": 3,
+        "width": "7",
+        "height": "1",
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Avulso",
+                "value": "AVULSO",
+                "type": "str"
+            },
+            {
+                "label": "Assinante",
+                "value": "ASSINANTE",
+                "type": "str"
+            },
+            {
+                "label": "Frota",
+                "value": "FROTA",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 620,
+        "y": 360,
+        "wires": [
+            [
+                "786fd9368432062f"
+            ]
+        ]
+    },
+    {
+        "id": "66136687595b7255",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "isSet",
+        "func": "const user = flow.get('user');\nconst station = flow.get('station');\nconst bill = flow.get('bill');\n\nif (user.clientType === '' || station.chargerType === '' || bill.date === '') {\n    return { payload: false }\n} else {\n    return { payload: true }\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 460,
+        "wires": [
+            [
+                "3398d9a182b8897c"
+            ]
+        ]
+    },
+    {
+        "id": "3398d9a182b8897c",
+        "type": "switch",
+        "z": "c0c87725f2b6a546",
+        "name": "readyToCharge",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 640,
+        "y": 460,
+        "wires": [
+            [
+                "ca2b4a5ae2921233"
+            ],
+            [
+                "6dd2a349b5ebd5de",
+                "b51fdb569db729a7"
+            ]
+        ]
+    },
+    {
+        "id": "6a59374d70f9cfbf",
+        "type": "ui_text",
+        "z": "c0c87725f2b6a546",
+        "group": "0d6348cd3c581ac5",
+        "order": 6,
+        "width": "7",
+        "height": "1",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f23131",
+        "x": 1030,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "ca2b4a5ae2921233",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "Setta Erro",
+        "func": "const bill = flow.get('bill');\n\nif (bill.date === '') {\n    return { payload: \"Defina a data\" };\n} else {\n    return { payload: \"Selecione tipo de cliente e de carregador\" };\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 420,
+        "wires": [
+            [
+                "6a59374d70f9cfbf"
+            ]
+        ]
+    },
+    {
+        "id": "e23bc1ca7ac4763b",
+        "type": "switch",
+        "z": "c0c87725f2b6a546",
+        "name": "readyToPrice",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1050,
+        "y": 300,
+        "wires": [
+            [
+                "8c0e80b5668d80fc"
+            ]
+        ]
+    },
+    {
+        "id": "8c0e80b5668d80fc",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "setTimeRanges",
+        "func": "const timeRanges = [[0, 3], [3, 6], [6, 9], [9, 12], [12, 15], [15, 18], [18, 21], [21, 24]]\nreturn { payload: { timeRanges } };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 120,
+        "wires": [
+            [
+                "e0da2ff71541853a"
+            ]
+        ]
+    },
+    {
+        "id": "f8b5e52cdc336be8",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "prepareQuery",
+        "func": "const query = `\nSELECT \n  ${msg.payload.timeRanges[0]} AS hora_inicio,\n  SUM(potencia_aparente_total)/COUNT(potencia_aparente_total) AS val\nFROM public.demanda\nWHERE EXTRACT(HOUR FROM \"timestamp\") BETWEEN ${msg.payload.timeRanges[0]} AND ${msg.payload.timeRanges[1]}\n`;\n\nreturn { query };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1240,
+        "y": 240,
+        "wires": [
+            [
+                "dfa715b3b0c2f103"
+            ]
+        ]
+    },
+    {
+        "id": "dfa715b3b0c2f103",
+        "type": "pg",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "query": "",
+        "pgConfig": "52bbcde4b86dc022",
+        "outputFormat": "single",
+        "x": 1250,
+        "y": 300,
+        "wires": [
+            [
+                "d3917322a9c8b6ec"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "6b21c1d1f32ae067",
+        "type": "ui_button",
+        "z": "c0c87725f2b6a546",
+        "name": "",
+        "group": "0d6348cd3c581ac5",
+        "order": 4,
+        "width": "7",
+        "height": "1",
+        "passthru": false,
+        "label": "Define Data e Hora",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 290,
+        "y": 500,
+        "wires": [
+            [
+                "cb3df65e8d9f70be"
+            ]
+        ]
+    },
+    {
+        "id": "cb3df65e8d9f70be",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "setDate",
+        "func": "function getRandomDateLastMonth() {\n    const today = new Date();\n    const firstDayLastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);\n    const lastDayLastMonth = new Date(today.getFullYear(), today.getMonth(), 0);\n\n    const randomTime = firstDayLastMonth.getTime() + Math.random() * (lastDayLastMonth.getTime() - firstDayLastMonth.getTime());\n    return new Date(randomTime);\n}\n\nconst bill = flow.get('bill');\n\nbill.date = getRandomDateLastMonth();\n\nflow.set('bill', bill);\n\nreturn { payload: \"\" };",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 500,
+        "wires": [
+            [
+                "925c79710f12ab65",
+                "fe7afbd2ae4866ec",
+                "6a59374d70f9cfbf"
+            ]
+        ]
+    },
+    {
+        "id": "fe7afbd2ae4866ec",
+        "type": "function",
+        "z": "c0c87725f2b6a546",
+        "name": "setPrice",
+        "func": "const baseTimePrices = global.get('base_time_prices');\nconst bill = flow.get('bill');\n\nif (baseTimePrices.length === 0 || bill.date === '') {\n    bill.pricePerEnergy = 0;\n} else {\n    const hour = bill.date.getHours();\n    const idx = Math.floor(hour/3);\n    bill.pricePerEnergy = baseTimePrices[idx];\n}\n\nflow.set('bill', bill);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1320,
+        "y": 480,
+        "wires": [
+            [
+                "39cec44df78e8bd9"
             ]
         ]
     },
@@ -1389,11 +1711,6 @@
                 "cd405fe223a85f12",
                 "8107458de6c4e257",
                 "44bece713a1ee3f4",
-                "67529314c36819b7",
-                "70934acfce6f4c46",
-                "7ddaaeeb31ea453f",
-                "d336b934449f7bb6",
-                "08c1f0ee3422537b",
                 "2c820c776970a207"
             ]
         ]
@@ -1427,11 +1744,15 @@
         "width": 4,
         "height": 1,
         "name": "",
-        "label": "revenue",
+        "label": "Receita Total",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 660,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 670,
         "y": 160,
         "wires": []
     },
@@ -1460,14 +1781,18 @@
         "type": "ui_text",
         "z": "7ff87b268efdbf78",
         "group": "d9d99228efd78e53",
-        "order": 4,
+        "order": 3,
         "width": 4,
         "height": 1,
         "name": "",
-        "label": "number of bills",
+        "label": "Total de Contas",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 680,
         "y": 120,
         "wires": []
@@ -1477,7 +1802,7 @@
         "type": "function",
         "z": "7ff87b268efdbf78",
         "name": "ticket",
-        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\n\nreturn { payload: (totalValue / bills.length || 0).toFixed(2) };",
+        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\n\nreturn { payload: `R\\$${(totalValue / bills.length || 0).toFixed(2)}` };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1497,15 +1822,19 @@
         "type": "ui_text",
         "z": "7ff87b268efdbf78",
         "group": "d9d99228efd78e53",
-        "order": 3,
+        "order": 2,
         "width": 4,
         "height": 1,
         "name": "",
-        "label": "ticket",
+        "label": "Ticket Médio",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 650,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 670,
         "y": 200,
         "wires": []
     },
@@ -1534,15 +1863,19 @@
         "type": "ui_text",
         "z": "7ff87b268efdbf78",
         "group": "d9d99228efd78e53",
-        "order": 7,
+        "order": 4,
         "width": 4,
         "height": 1,
         "name": "",
-        "label": "number of clients",
+        "label": "Número de Clientes",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 690,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 700,
         "y": 240,
         "wires": []
     },
@@ -1551,7 +1884,7 @@
         "type": "function",
         "z": "7ff87b268efdbf78",
         "name": "ltv",
-        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\n\nlet names = bills.map(b => b.username);\nlet uniqueNames = [...new Set(names)];\nlet numUniqueNames = uniqueNames.length;\n\nreturn {payload: (totalValue/numUniqueNames || 0).toFixed(2)};",
+        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\n\nlet names = bills.map(b => b.username);\nlet uniqueNames = [...new Set(names)];\nlet numUniqueNames = uniqueNames.length;\n\nreturn {payload: `R\\$${(totalValue/numUniqueNames || 0).toFixed(2)}` };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1571,14 +1904,18 @@
         "type": "ui_text",
         "z": "7ff87b268efdbf78",
         "group": "d9d99228efd78e53",
-        "order": 6,
+        "order": 5,
         "width": 4,
         "height": 1,
         "name": "",
-        "label": "ltv",
+        "label": "LTV",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 650,
         "y": 280,
         "wires": []
@@ -1587,19 +1924,42 @@
         "id": "44bece713a1ee3f4",
         "type": "function",
         "z": "7ff87b268efdbf78",
-        "name": "morning revenue",
-        "func": "let bills = global.get('bills');\n\nlet morningBills = bills.filter(bill => bill.period === 'morning');\nlet sum = morningBills.reduce((accumulator, bill) => accumulator + bill.value, 0);\n\nreturn {payload: sum};",
+        "name": "sum revenues",
+        "func": "let bills = global.get('bills');\nlet billsPerTimeSlot = {\n    \"0-3\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"3-6\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"6-9\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"9-12\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"12-15\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"15-18\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"18-21\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"21-24\": { totalRev: 0, totalBills: 0, totalEnergy: 0}\n}\n\nfor (const b in bills) {\n    const hour = b.date.getHours();\n    const value = b[\"value\"];\n    const energy = b.chargedEnergy;\n    switch (true){\n        case (0 <= hour && hour < 3):\n            billsPerTimeSlot[\"0-3\"].totalBills += 1;\n            billsPerTimeSlot[\"0-3\"].totalRev += value;\n            billsPerTimeSlot[\"0-3\"].totalEnergy += energy;\n            break;\n        case (3 <= hour && hour < 6):\n            billsPerTimeSlot[\"3-6\"].totalBills += 1;\n            billsPerTimeSlot[\"3-6\"].totalRev += value;\n            billsPerTimeSlot[\"3-6\"].totalEnergy += energy;\n            break;\n        case (6 <= hour && hour < 9):\n            billsPerTimeSlot[\"6-9\"].totalBills += 1;\n            billsPerTimeSlot[\"6-9\"].totalRev += value;\n            billsPerTimeSlot[\"6-9\"].totalEnergy += energy;\n            break;\n        case (9 <= hour && hour < 12):\n            billsPerTimeSlot[\"9-12\"].totalBills += 1;\n            billsPerTimeSlot[\"9-12\"].totalRev += value;\n            billsPerTimeSlot[\"9-12\"].totalEnergy += energy;\n            break;\n        case (12 <= hour && hour < 15):\n            billsPerTimeSlot[\"12-15\"].totalBills += 1;\n            billsPerTimeSlot[\"12-15\"].totalRev += value;\n            billsPerTimeSlot[\"12-15\"].totalEnergy += energy;\n            break;\n        case (15 <= hour && hour < 18):\n            billsPerTimeSlot[\"15-18\"].totalBills += 1;\n            billsPerTimeSlot[\"15-18\"].totalRev += value;\n            billsPerTimeSlot[\"15-18\"].totalEnergy += energy;\n            break;\n        case (18 <= hour && hour < 21):\n            billsPerTimeSlot[\"18-21\"].totalBills += 1;\n            billsPerTimeSlot[\"18-21\"].totalRev += value;\n            billsPerTimeSlot[\"18-21\"].totalEnergy += energy;\n            break;\n        case (21 <= hour && hour < 24):\n            billsPerTimeSlot[\"21-24\"].totalBills += 1;\n            billsPerTimeSlot[\"21-24\"].totalRev += value;\n            billsPerTimeSlot[\"21-24\"].totalEnergy += energy;\n            break;\n        default:\n            break;\n    }\n}\n\nlet formattedBills = {};\n\nfor (const slot in billsPerTimeSlot) {\n    const data = billsPerTimeSlot[slot];\n    formattedBills[slot] = {\n        totalRev: `R$ ${data.totalRev.toFixed(2)}`,\n        totalBills: data.totalBills, // mantido como número\n        totalEnergy: `${data.totalEnergy.toFixed(2)} kWh`\n    };\n}\n\nreturn { payload: formattedBills };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 450,
+        "x": 440,
         "y": 380,
         "wires": [
             [
-                "22186c3764c0abe9"
+                "22186c3764c0abe9",
+                "e2b7315c43695125",
+                "d5670c5462c0afe3",
+                "ae40ddf737fb210d",
+                "ddfafdef14918a1c",
+                "7f77e3c6dcd62512",
+                "db4263aeb17c6cd7",
+                "25f1e09b73cfbade",
+                "ce684d74d2c0df58",
+                "11a2a517d08fbcb9",
+                "eebac589eee36e46",
+                "74819ebe77f2efe8",
+                "9cf104be9674c64e",
+                "1609055a0bebf110",
+                "49c4777c5beeaca0",
+                "dce51cdb9b796a9b",
+                "5a178b5d28c45d12",
+                "c1a8754e42cb1701",
+                "01449d05a4aad5cd",
+                "5aa9d07856663157",
+                "ec43f28041e2db80",
+                "d71e81d27ac9e927",
+                "391cf5de49143500",
+                "cf71967336c32d4b"
             ]
         ]
     },
@@ -1612,197 +1972,16 @@
         "width": 4,
         "height": 1,
         "name": "",
-        "label": "morning revenue",
-        "format": "{{msg.payload}}",
+        "label": "0h - 3h",
+        "format": "{{msg.payload[\"0-3\"].totalRev}}",
         "layout": "row-spread",
         "className": "",
-        "x": 690,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "67529314c36819b7",
-        "type": "function",
-        "z": "7ff87b268efdbf78",
-        "name": "afternoon revenue",
-        "func": "let bills = global.get('bills');\n\nlet afternoonBills = bills.filter(bill => bill.period === 'afternoon');\nlet sum = afternoonBills.reduce((accumulator, bill) => accumulator + bill.value, 0);\n\nreturn {payload: sum};",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 450,
-        "y": 420,
-        "wires": [
-            [
-                "f4e2e4d12494cb3b"
-            ]
-        ]
-    },
-    {
-        "id": "f4e2e4d12494cb3b",
-        "type": "ui_text",
-        "z": "7ff87b268efdbf78",
-        "group": "812c9f59fa48c699",
-        "order": 2,
-        "width": 4,
-        "height": 1,
-        "name": "",
-        "label": "afternoon revenue",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 690,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "70934acfce6f4c46",
-        "type": "function",
-        "z": "7ff87b268efdbf78",
-        "name": "night revenue",
-        "func": "let bills = global.get('bills');\n\nlet nightBills = bills.filter(bill => bill.period === 'night');\nlet sum = nightBills.reduce((accumulator, bill) => accumulator + bill.value, 0);\n\nreturn {payload: sum};",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 460,
-        "wires": [
-            [
-                "6d7c7a8733fd045e"
-            ]
-        ]
-    },
-    {
-        "id": "6d7c7a8733fd045e",
-        "type": "ui_text",
-        "z": "7ff87b268efdbf78",
-        "group": "812c9f59fa48c699",
-        "order": 3,
-        "width": 4,
-        "height": 1,
-        "name": "",
-        "label": "night revenue",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 680,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "7ddaaeeb31ea453f",
-        "type": "function",
-        "z": "7ff87b268efdbf78",
-        "name": "morning bills",
-        "func": "let bills = global.get('bills');\n\nlet morningBills = bills.filter(bill => bill.period === 'morning');\nreturn {payload: morningBills.length};",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 430,
-        "y": 540,
-        "wires": [
-            [
-                "11955ead96ad76db"
-            ]
-        ]
-    },
-    {
-        "id": "11955ead96ad76db",
-        "type": "ui_text",
-        "z": "7ff87b268efdbf78",
-        "group": "0a04b855efa1e24e",
-        "order": 1,
-        "width": 4,
-        "height": 1,
-        "name": "",
-        "label": "morning bills",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 670,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "d336b934449f7bb6",
-        "type": "function",
-        "z": "7ff87b268efdbf78",
-        "name": "afternoon bills",
-        "func": "let bills = global.get('bills');\n\nlet afternoonBills = bills.filter(bill => bill.period === 'afternoon');\n\nreturn {payload: afternoonBills.length};",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 440,
-        "y": 580,
-        "wires": [
-            [
-                "01d0f394846133df"
-            ]
-        ]
-    },
-    {
-        "id": "01d0f394846133df",
-        "type": "ui_text",
-        "z": "7ff87b268efdbf78",
-        "group": "0a04b855efa1e24e",
-        "order": 3,
-        "width": 4,
-        "height": 1,
-        "name": "",
-        "label": "afternoon bills",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 680,
-        "y": 580,
-        "wires": []
-    },
-    {
-        "id": "08c1f0ee3422537b",
-        "type": "function",
-        "z": "7ff87b268efdbf78",
-        "name": "night bills",
-        "func": "let bills = global.get('bills');\n\nlet nightBills = bills.filter(bill => bill.period === 'night');\nreturn { payload: nightBills.length};",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 420,
-        "y": 620,
-        "wires": [
-            [
-                "5c10646893dcef81"
-            ]
-        ]
-    },
-    {
-        "id": "5c10646893dcef81",
-        "type": "ui_text",
-        "z": "7ff87b268efdbf78",
-        "group": "0a04b855efa1e24e",
-        "order": 5,
-        "width": 4,
-        "height": 1,
-        "name": "",
-        "label": "night bills",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
         "x": 660,
-        "y": 620,
+        "y": 380,
         "wires": []
     },
     {
@@ -1810,7 +1989,7 @@
         "type": "function",
         "z": "7ff87b268efdbf78",
         "name": "prices",
-        "func": "let prices = global.get('prices');\n\nreturn {payload: prices};",
+        "func": "let base_prices = global.get('base_prices');\nlet prices = [];\n\nprices.push(`R\\$${(Math.round(base_prices[\"AC_LENTO\"][0] * 100) / 100).toFixed(2)} a R\\$${(Math.round(base_prices[\"AC_LENTO\"][1] * 100) / 100).toFixed(2)}`);\nprices.push(`R\\$${(Math.round(base_prices[\"AC_RAPIDO\"][0] * 100) / 100).toFixed(2)} a R\\$${(Math.round(base_prices[\"AC_RAPIDO\"][1] * 100) / 100).toFixed(2)}`);\nprices.push(`R\\$${(Math.round(base_prices[\"DC_RAPIDO\"][0] * 100) / 100).toFixed(2)} a R\\$${(Math.round(base_prices[\"DC_RAPIDO\"][1] * 100) / 100).toFixed(2)}`);\n\nreturn {payload: prices};",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1836,11 +2015,15 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "morning",
+        "label": "Carregador Lento (AC Nível 2)",
         "format": "{{msg.payload[0]}}",
         "layout": "row-spread",
         "className": "",
-        "x": 660,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 730,
         "y": 720,
         "wires": []
     },
@@ -1853,11 +2036,15 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "afternoon",
+        "label": "Carregador Semi-Rápido (AC Trifásico)",
         "format": "{{msg.payload[1]}}",
         "layout": "row-spread",
         "className": "",
-        "x": 660,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 760,
         "y": 760,
         "wires": []
     },
@@ -1870,11 +2057,15 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "night",
+        "label": "Carregador Rápido (DC - CCS)",
         "format": "{{msg.payload[2]}}",
         "layout": "row-spread",
         "className": "",
-        "x": 650,
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 730,
         "y": 800,
         "wires": []
     },
@@ -1883,7 +2074,7 @@
         "type": "ui_text_input",
         "z": "7ff87b268efdbf78",
         "name": "",
-        "label": "morning",
+        "label": "Min",
         "tooltip": "",
         "group": "7eb4ad1bb9f8ef34",
         "order": 1,
@@ -1896,7 +2087,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 420,
+        "x": 390,
         "y": 880,
         "wires": [
             [
@@ -1909,7 +2100,7 @@
         "type": "ui_text_input",
         "z": "7ff87b268efdbf78",
         "name": "",
-        "label": "afternoon",
+        "label": "Max",
         "tooltip": "",
         "group": "7eb4ad1bb9f8ef34",
         "order": 2,
@@ -1922,7 +2113,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 420,
+        "x": 390,
         "y": 920,
         "wires": [
             [
@@ -1931,44 +2122,18 @@
         ]
     },
     {
-        "id": "ffd318c01134e689",
-        "type": "ui_text_input",
-        "z": "7ff87b268efdbf78",
-        "name": "",
-        "label": "night",
-        "tooltip": "",
-        "group": "7eb4ad1bb9f8ef34",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "topic",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "msg",
-        "x": 410,
-        "y": 960,
-        "wires": [
-            [
-                "c13482805f1a02c4"
-            ]
-        ]
-    },
-    {
         "id": "256d82a8f5d34866",
         "type": "function",
         "z": "7ff87b268efdbf78",
-        "name": "newMorningPrice",
-        "func": "flow.set('newMorningPrice', msg.payload);",
+        "name": "newSlowMinPrice",
+        "func": "flow.set('newSlowMinPrice', msg.payload);",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 670,
         "y": 880,
         "wires": [
             []
@@ -1978,34 +2143,16 @@
         "id": "c64cfdbaac9d1fd2",
         "type": "function",
         "z": "7ff87b268efdbf78",
-        "name": "newAfternoonPrice",
-        "func": "flow.set('newAfternoonPrice', msg.payload);",
+        "name": "newSlowMaxPrice",
+        "func": "flow.set('newSlowMaxPrice', msg.payload);",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 670,
         "y": 920,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c13482805f1a02c4",
-        "type": "function",
-        "z": "7ff87b268efdbf78",
-        "name": "newNightPrice",
-        "func": "flow.set('newNightPrice', msg.payload);",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 680,
-        "y": 960,
         "wires": [
             []
         ]
@@ -2020,7 +2167,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "set new prices",
+        "label": "Atualizar Preços",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2030,8 +2177,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 440,
-        "y": 1000,
+        "x": 420,
+        "y": 1220,
         "wires": [
             [
                 "a563fef8d4ebad24"
@@ -2043,7 +2190,560 @@
         "type": "function",
         "z": "7ff87b268efdbf78",
         "name": "set new prices",
-        "func": "let morningPrice = flow.get('newMorningPrice');\nlet afternoonPrice = flow.get('newAfternoonPrice');\nlet nightPrice = flow.get('newNightPrice');\n\nlet currentPrices = global.get('prices');\n\nif (morningPrice === undefined) morningPrice = currentPrices[0];\nif (afternoonPrice === undefined) afternoonPrice = currentPrices[1];\nif (nightPrice === undefined) nightPrice = currentPrices[2];\n\nglobal.set('prices', [morningPrice, afternoonPrice, nightPrice]);\n\nreturn {payload: morningPrice};",
+        "func": "let base_prices = global.get('base_prices');\n\nconst newSlowMinPrice = flow.get('newSlowMinPrice');\nconst newSlowMaxPrice = flow.get('newSlowMaxPrice');\nconst newMediumMinPrice = flow.get('newMediumMinPrice');\nconst newMediumMaxPrice = flow.get('newMediumMaxPrice');\nconst newFastMinPrice = flow.get('newFastMinPrice');\nconst newFastMaxPrice = flow.get('newFastMaxPrice');\n\nif (newSlowMinPrice) base_prices[\"AC_LENTO\"][0] = newSlowMinPrice;\nif (newSlowMaxPrice) base_prices[\"AC_LENTO\"][1] = newSlowMaxPrice;\nif (newMediumMinPrice) base_prices[\"AC_MEDIO\"][0] = newMediumMinPrice;\nif (newMediumMaxPrice) base_prices[\"AC_MEDIO\"][1] = newMediumMaxPrice;\nif (newFastMinPrice) base_prices[\"AC_RAPIDO\"][0] = newFastMinPrice;\nif (newFastMaxPrice) base_prices[\"AC_RAPIDO\"][1] = newFastMaxPrice;\n\nglobal.set('base_prices', base_prices);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e2b7315c43695125",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "3h - 6h",
+        "format": "{{msg.payload[\"3-6\"].totalRev}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "d5670c5462c0afe3",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "6h - 9h",
+        "format": "{{msg.payload[\"6-9\"].totalRev}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ae40ddf737fb210d",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "9h - 12h",
+        "format": "{{msg.payload[\"9-12\"].totalRev}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ddfafdef14918a1c",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "12h - 15h",
+        "format": "{{msg.payload[\"12-15\"].totalRev}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "7f77e3c6dcd62512",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "15h - 18h",
+        "format": "{{msg.payload[\"15-18\"].totalRev}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "db4263aeb17c6cd7",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "18h - 21h",
+        "format": "{{msg.payload[\"18-21\"].totalRev}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "25f1e09b73cfbade",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "812c9f59fa48c699",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "21h - 24h",
+        "format": "{{msg.payload[\"21-24\"].totalRev}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "ce684d74d2c0df58",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "0h - 3h",
+        "format": "{{msg.payload[\"0-3\"].totalBills}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "11a2a517d08fbcb9",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "3h - 6h",
+        "format": "{{msg.payload[\"3-6\"].totalBills}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "eebac589eee36e46",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "6h - 9h",
+        "format": "{{msg.payload[\"6-9\"].totalBills}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "74819ebe77f2efe8",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "9h - 12h",
+        "format": "{{msg.payload[\"9-12\"].totalBills}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "9cf104be9674c64e",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "12h - 15h",
+        "format": "{{msg.payload[\"12-15\"].totalBills}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "1609055a0bebf110",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "15h - 18h",
+        "format": "{{msg.payload[\"15-18\"].totalBills}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "49c4777c5beeaca0",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "18h - 21h",
+        "format": "{{msg.payload[\"18-21\"].totalBills}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "dce51cdb9b796a9b",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "0a04b855efa1e24e",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "21h - 24h",
+        "format": "{{msg.payload[\"21-24\"].totalBills}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 900,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "5a178b5d28c45d12",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "5ff7b2eec84a8938",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "0h - 3h",
+        "format": "{{msg.payload[\"0-3\"].totalEnergy}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1140,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "c1a8754e42cb1701",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "5ff7b2eec84a8938",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "3h - 6h",
+        "format": "{{msg.payload[\"3-6\"].totalEnergy}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1140,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "01449d05a4aad5cd",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "5ff7b2eec84a8938",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "6h - 9h",
+        "format": "{{msg.payload[\"6-9\"].totalEnergy}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1140,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5aa9d07856663157",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "5ff7b2eec84a8938",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "9h - 12h",
+        "format": "{{msg.payload[\"9-12\"].totalEnergy}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1140,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ec43f28041e2db80",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "5ff7b2eec84a8938",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "12h - 15h",
+        "format": "{{msg.payload[\"12-15\"].totalEnergy}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1140,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d71e81d27ac9e927",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "5ff7b2eec84a8938",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "15h - 18h",
+        "format": "{{msg.payload[\"15-18\"].totalEnergy}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1140,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "391cf5de49143500",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "5ff7b2eec84a8938",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "18h - 21h",
+        "format": "{{msg.payload[\"18-21\"].totalEnergy}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1140,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "cf71967336c32d4b",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "5ff7b2eec84a8938",
+        "order": 1,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "21h - 24h",
+        "format": "{{msg.payload[\"21-24\"].totalEnergy}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 1140,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "e82c7995a7f04f9b",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "",
+        "label": "Min",
+        "tooltip": "",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 390,
+        "y": 1000,
+        "wires": [
+            [
+                "2b2bb76f0f23bd44"
+            ]
+        ]
+    },
+    {
+        "id": "3cc1a27baf569ab8",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "",
+        "label": "Max",
+        "tooltip": "",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 390,
+        "y": 1040,
+        "wires": [
+            [
+                "369360131fe51c91"
+            ]
+        ]
+    },
+    {
+        "id": "2b2bb76f0f23bd44",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newMediumMinPrice",
+        "func": "flow.set('newMediumMinPrice', msg.payload);",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2053,25 +2753,176 @@
         "x": 680,
         "y": 1000,
         "wires": [
+            []
+        ]
+    },
+    {
+        "id": "369360131fe51c91",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newMediumMaxPrice",
+        "func": "flow.set('newMediumMaxPrice', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5caeb62a24eed14",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "",
+        "label": "Min",
+        "tooltip": "",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 390,
+        "y": 1120,
+        "wires": [
             [
-                "87b18e53bd2fcf29"
+                "2b6f8a7dbfefd8ac"
             ]
         ]
     },
     {
-        "id": "87b18e53bd2fcf29",
-        "type": "debug",
+        "id": "30d48401da0a02b8",
+        "type": "ui_text_input",
         "z": "7ff87b268efdbf78",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 900,
-        "y": 1000,
+        "name": "",
+        "label": "Max",
+        "tooltip": "",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 390,
+        "y": 1160,
+        "wires": [
+            [
+                "5dbbe394a3077403"
+            ]
+        ]
+    },
+    {
+        "id": "2b6f8a7dbfefd8ac",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newFastMinPrice",
+        "func": "flow.set('newFastMinPrice', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5dbbe394a3077403",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newFastMaxPrice",
+        "func": "flow.set('newFastMaxPrice', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9eb21e3090304ef7",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Carregador Lento (AC Nível 2)",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 470,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "89b3bc88dc3ceb00",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Carregador Semi-Rápido (AC Trifásico)",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 500,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "f55078011ee28c63",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "7eb4ad1bb9f8ef34",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Carregador Rápido (DC - CCS)",
+        "format": "",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 470,
+        "y": 1080,
         "wires": []
     }
 ]
