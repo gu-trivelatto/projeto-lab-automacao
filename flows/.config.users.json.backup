@@ -6,7 +6,7 @@
                 "view-store-position": false,
                 "view-show-grid": true,
                 "view-snap-grid": true,
-                "view-grid-size": 20,
+                "view-grid-size": "20",
                 "view-node-status": true,
                 "view-node-show-label": true,
                 "view-show-tips": true,
@@ -14,6 +14,9 @@
             },
             "tours": {
                 "welcome": "4.0.9-git"
+            },
+            "context": {
+                "flowRefresh": true
             }
         },
         "debug": {
@@ -23,9 +26,7 @@
                 "44fec81bb655a554",
                 "5a342dc629f19d68",
                 "87b18e53bd2fcf29",
-                "324c84c38dbe7afa",
-                "0c52311ece8f09a4",
-                "f5527955578e1164"
+                "324c84c38dbe7afa"
             ]
         }
     }

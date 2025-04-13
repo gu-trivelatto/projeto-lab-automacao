@@ -1,13 +1,5 @@
 [
     {
-        "id": "b058e3d3268403eb",
-        "type": "tab",
-        "label": "Fluxo 1",
-        "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "c0c87725f2b6a546",
         "type": "tab",
         "label": "user",
@@ -152,34 +144,6 @@
         }
     },
     {
-        "id": "ad04d90211afad4d",
-        "type": "ui_tab",
-        "name": "Tab 1",
-        "icon": "dashboard",
-        "order": 1
-    },
-    {
-        "id": "285f97dc3bd19a1d",
-        "type": "ui_group",
-        "name": "Group 1",
-        "tab": "ad04d90211afad4d",
-        "order": 1,
-        "disp": true,
-        "width": 6
-    },
-    {
-        "id": "6c39d5fa539d0b1b",
-        "type": "postgresDB",
-        "name": "leitor@143.107.102.8:5432/data-energia",
-        "host": "143.107.102.8",
-        "port": 5432,
-        "database": "data-energia",
-        "ssl": false,
-        "max": 10,
-        "min": 1,
-        "idle": 1000
-    },
-    {
         "id": "68f25da057c68e6d",
         "type": "ui_tab",
         "name": "Polibras",
@@ -308,188 +272,36 @@
         "className": ""
     },
     {
-        "id": "098f0eb02b5e1018",
-        "type": "mqtt in",
-        "z": "b058e3d3268403eb",
-        "name": "Dados JE05",
-        "topic": "garsoft/dev/je05/dados",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "2fa5a786019761a6",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 270,
-        "y": 200,
-        "wires": [
-            [
-                "5a342dc629f19d68",
-                "395f2c4125d799eb"
-            ]
-        ]
+        "id": "add459b43846ad81",
+        "type": "ui_group",
+        "name": "Descontos",
+        "tab": "4151d7703cfd2b05",
+        "order": 7,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
     },
     {
-        "id": "5a342dc629f19d68",
-        "type": "debug",
-        "z": "b058e3d3268403eb",
-        "name": "Debug Dados JE05",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 530,
-        "y": 200,
-        "wires": []
+        "id": "0587f84de3fdfc47",
+        "type": "ui_group",
+        "name": "Novos Descontos",
+        "tab": "4151d7703cfd2b05",
+        "order": 8,
+        "disp": true,
+        "width": "4",
+        "collapse": false,
+        "className": ""
     },
     {
-        "id": "395f2c4125d799eb",
-        "type": "function",
-        "z": "b058e3d3268403eb",
-        "name": "Consumo em kWh",
-        "func": "msg.payload = msg.payload.DATA.PT;\nvar count = (context.get(\"counter\") || 0) + msg.payload/(360*1000);\nmsg.payload = Math.round(count*10000)/10000;\ncontext.set(\"counter\", count);\nvar d = new Date();\nif (d.getHours() === 0 && d.getMinutes() === 0 && d.getSeconds() <= 30) {\n    context.set(\"counter\", 0);\n    msg.payload = 0;\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 530,
-        "y": 300,
-        "wires": [
-            [
-                "05a3a356c08a9623",
-                "e3af2a4e08aa6446"
-            ]
-        ]
-    },
-    {
-        "id": "05a3a356c08a9623",
-        "type": "ui_chart",
-        "z": "b058e3d3268403eb",
-        "name": "",
-        "group": "285f97dc3bd19a1d",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "label": "chart",
-        "chartType": "line",
-        "legend": "false",
-        "xformat": "HH:mm:ss",
-        "interpolate": "linear",
-        "nodata": "",
-        "dot": false,
-        "ymin": "",
-        "ymax": "",
-        "removeOlder": 1,
-        "removeOlderPoints": "",
-        "removeOlderUnit": "3600",
-        "cutout": 0,
-        "useOneColor": false,
-        "useUTC": false,
-        "colors": [
-            "#1f77b4",
-            "#aec7e8",
-            "#ff7f0e",
-            "#2ca02c",
-            "#98df8a",
-            "#d62728",
-            "#ff9896",
-            "#9467bd",
-            "#c5b0d5"
-        ],
-        "outputs": 1,
-        "useDifferentColor": false,
-        "className": "",
-        "x": 750,
-        "y": 360,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "e3af2a4e08aa6446",
-        "type": "debug",
-        "z": "b058e3d3268403eb",
-        "name": "Debug Consumo kWh",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 800,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "74f08a458d118c55",
-        "type": "postgrestor",
-        "z": "b058e3d3268403eb",
-        "name": "Histórico de Dados - SQL",
-        "query": "SELECT * FROM demanda;",
-        "postgresDB": "6c39d5fa539d0b1b",
-        "output": true,
-        "outputs": 1,
-        "x": 550,
-        "y": 460,
-        "wires": [
-            [
-                "44fec81bb655a554"
-            ]
-        ]
-    },
-    {
-        "id": "44fec81bb655a554",
-        "type": "debug",
-        "z": "b058e3d3268403eb",
-        "name": "Debug Dados DB",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 850,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "7793ae5b2baea522",
-        "type": "inject",
-        "z": "b058e3d3268403eb",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 300,
-        "y": 460,
-        "wires": [
-            [
-                "74f08a458d118c55"
-            ]
-        ]
+        "id": "34a51b2df8e3bcb8",
+        "type": "ui_spacer",
+        "z": "7ff87b268efdbf78",
+        "name": "spacer",
+        "group": "d9d99228efd78e53",
+        "order": 6,
+        "width": "4",
+        "height": "3"
     },
     {
         "id": "d577c6e7f2aa82bd",
@@ -500,7 +312,7 @@
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0,\n    clientType: ''\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0,\n    chargerType: '',\n    powerDivider: 70\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('base_prices', {\n    \"AC_LENTO\": [1.2, 1.8],\n    \"AC_RAPIDO\": [1.8, 2.5],\n    \"DC_RAPIDO\": [2.5, 4]\n});\nglobal.set('base_time_prices', [])",
+        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0,\n    clientType: ''\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0,\n    chargerType: '',\n    powerDivider: 70\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('base_prices', {\n    \"AC_LENTO\": [1.2, 1.8],\n    \"AC_RAPIDO\": [1.8, 2.5],\n    \"DC_RAPIDO\": [2.5, 4]\n});\n\nglobal.set('discounts', {\n    \"AVULSO\": 1,\n    \"ASSINANTE\": 0.95,\n    \"FROTA\": 0.85\n})\n\nglobal.set('base_time_prices', [])",
         "finalize": "",
         "libs": [],
         "x": 590,
@@ -1039,7 +851,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "pay",
-        "func": "const bills = global.get('bills');\nconst bill = flow.get('bill');\n\nbills.push(bill);\nglobal.set('bills', bills);\n\nreturn {payload: true};",
+        "func": "const bills = global.get('bills');\nconst bill = flow.get('bill');\n\nbills.push({ ...bill }); // ← Clona o objeto\nglobal.set('bills', bills);\n\nreturn { payload: true };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1318,7 +1130,7 @@
         "type": "function",
         "z": "c0c87725f2b6a546",
         "name": "setPriceRange",
-        "func": "const user = flow.get('user');\nconst station = flow.get('station');\n\nconst basePrices = global.get('base_prices');\nconst discounts = {\n    \"AVULSO\": 1,\n    \"ASSINANTE\": 0.95,\n    \"FROTA\": 0.85\n}\nconst minMax = basePrices[station.chargerType];\n\nconst avgPower = msg.payload\n  .sort((a, b) => a.hora_inicio - b.hora_inicio)\n  .map(item => item.val);;\n\nconst min = Math.min(...avgPower);\nconst max = Math.max(...avgPower);\n\n// Normaliza para o intervalo minMax\nconst timeWindowDiscount = avgPower.map(v => {\n  return (minMax[0] + ((v - min) / (max - min)) * (minMax[1] - minMax[0])) * discounts[user.clientType];\n});\n\nglobal.set('base_time_prices', timeWindowDiscount);\n\nreturn { payload: timeWindowDiscount }",
+        "func": "const user = flow.get('user');\nconst station = flow.get('station');\n\nconst basePrices = global.get('base_prices');\nconst discounts = global.get('discounts');\n\nconst minMax = basePrices[station.chargerType];\n\nconst avgPower = msg.payload\n  .sort((a, b) => a.hora_inicio - b.hora_inicio)\n  .map(item => item.val);;\n\nconst min = Math.min(...avgPower);\nconst max = Math.max(...avgPower);\n\n// Normaliza para o intervalo minMax\nconst timeWindowDiscount = avgPower.map(v => {\n  return (minMax[0] + ((v - min) / (max - min)) * (minMax[1] - minMax[0])) * discounts[user.clientType];\n});\n\nglobal.set('base_time_prices', timeWindowDiscount);\n\nreturn { payload: timeWindowDiscount }",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1672,7 +1484,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1320,
+        "x": 1340,
         "y": 480,
         "wires": [
             [
@@ -1711,7 +1523,8 @@
                 "cd405fe223a85f12",
                 "8107458de6c4e257",
                 "44bece713a1ee3f4",
-                "2c820c776970a207"
+                "2c820c776970a207",
+                "3250c5a86cc59c0b"
             ]
         ]
     },
@@ -1720,7 +1533,7 @@
         "type": "function",
         "z": "7ff87b268efdbf78",
         "name": "revenue",
-        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\nreturn { payload: totalValue };",
+        "func": "let bills = global.get('bills');\n\nlet totalValue = 0;\nif (bills) {\n    bills.forEach(bill => {\n        totalValue += bill.value;\n    });\n}\nreturn { payload: `R\\$${(totalValue || 0).toFixed(2)}` };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2081,14 +1894,14 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 400,
-        "y": 880,
+        "x": 1020,
+        "y": 760,
         "wires": [
             [
                 "256d82a8f5d34866"
@@ -2107,14 +1920,14 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 400,
-        "y": 920,
+        "x": 1020,
+        "y": 800,
         "wires": [
             [
                 "c64cfdbaac9d1fd2"
@@ -2133,8 +1946,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 880,
+        "x": 1290,
+        "y": 760,
         "wires": [
             []
         ]
@@ -2151,8 +1964,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 920,
+        "x": 1290,
+        "y": 800,
         "wires": [
             []
         ]
@@ -2177,8 +1990,8 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 420,
-        "y": 1220,
+        "x": 1040,
+        "y": 1100,
         "wires": [
             [
                 "a563fef8d4ebad24"
@@ -2190,15 +2003,15 @@
         "type": "function",
         "z": "7ff87b268efdbf78",
         "name": "set new prices",
-        "func": "let base_prices = global.get('base_prices');\n\nconst newSlowMinPrice = flow.get('newSlowMinPrice');\nconst newSlowMaxPrice = flow.get('newSlowMaxPrice');\nconst newMediumMinPrice = flow.get('newMediumMinPrice');\nconst newMediumMaxPrice = flow.get('newMediumMaxPrice');\nconst newFastMinPrice = flow.get('newFastMinPrice');\nconst newFastMaxPrice = flow.get('newFastMaxPrice');\n\nif (newSlowMinPrice) base_prices[\"AC_LENTO\"][0] = newSlowMinPrice;\nif (newSlowMaxPrice) base_prices[\"AC_LENTO\"][1] = newSlowMaxPrice;\nif (newMediumMinPrice) base_prices[\"AC_MEDIO\"][0] = newMediumMinPrice;\nif (newMediumMaxPrice) base_prices[\"AC_MEDIO\"][1] = newMediumMaxPrice;\nif (newFastMinPrice) base_prices[\"AC_RAPIDO\"][0] = newFastMinPrice;\nif (newFastMaxPrice) base_prices[\"AC_RAPIDO\"][1] = newFastMaxPrice;\n\nglobal.set('base_prices', base_prices);",
+        "func": "let base_prices = global.get('base_prices');\n\nconst newSlowMinPrice = flow.get('newSlowMinPrice');\nconst newSlowMaxPrice = flow.get('newSlowMaxPrice');\nconst newMediumMinPrice = flow.get('newMediumMinPrice');\nconst newMediumMaxPrice = flow.get('newMediumMaxPrice');\nconst newFastMinPrice = flow.get('newFastMinPrice');\nconst newFastMaxPrice = flow.get('newFastMaxPrice');\n\nif (newSlowMinPrice !== undefined) base_prices[\"AC_LENTO\"][0] = newSlowMinPrice;\nif (newSlowMaxPrice !== undefined) base_prices[\"AC_LENTO\"][1] = newSlowMaxPrice;\nif (newMediumMinPrice !== undefined) base_prices[\"AC_MEDIO\"][0] = newMediumMinPrice;\nif (newMediumMaxPrice !== undefined) base_prices[\"AC_MEDIO\"][1] = newMediumMaxPrice;\nif (newFastMinPrice !== undefined) base_prices[\"AC_RAPIDO\"][0] = newFastMinPrice;\nif (newFastMaxPrice !== undefined) base_prices[\"AC_RAPIDO\"][1] = newFastMaxPrice;\n\nglobal.set('base_prices', base_prices);",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 1220,
+        "x": 1280,
+        "y": 1100,
         "wires": [
             []
         ]
@@ -2698,14 +2511,14 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 410,
-        "y": 1000,
+        "x": 1030,
+        "y": 880,
         "wires": [
             [
                 "2b2bb76f0f23bd44"
@@ -2724,14 +2537,14 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 410,
-        "y": 1040,
+        "x": 1030,
+        "y": 920,
         "wires": [
             [
                 "369360131fe51c91"
@@ -2750,8 +2563,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 1000,
+        "x": 1300,
+        "y": 880,
         "wires": [
             []
         ]
@@ -2768,8 +2581,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
-        "y": 1040,
+        "x": 1300,
+        "y": 920,
         "wires": [
             []
         ]
@@ -2786,14 +2599,14 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 400,
-        "y": 1120,
+        "x": 1020,
+        "y": 1000,
         "wires": [
             [
                 "2b6f8a7dbfefd8ac"
@@ -2812,14 +2625,14 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
         "className": "",
         "topicType": "msg",
-        "x": 400,
-        "y": 1160,
+        "x": 1020,
+        "y": 1040,
         "wires": [
             [
                 "5dbbe394a3077403"
@@ -2838,8 +2651,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 1120,
+        "x": 1290,
+        "y": 1000,
         "wires": [
             []
         ]
@@ -2856,8 +2669,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 670,
-        "y": 1160,
+        "x": 1290,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -2879,8 +2692,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 470,
-        "y": 840,
+        "x": 1090,
+        "y": 720,
         "wires": []
     },
     {
@@ -2900,8 +2713,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 500,
-        "y": 960,
+        "x": 1120,
+        "y": 840,
         "wires": []
     },
     {
@@ -2921,8 +2734,271 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 470,
-        "y": 1080,
+        "x": 1090,
+        "y": 960,
         "wires": []
+    },
+    {
+        "id": "3250c5a86cc59c0b",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "discounts",
+        "func": "let discounts = global.get('discounts');\nlet formattedDiscounts = [];\n\nformattedDiscounts.push(`${100 - discounts[\"AVULSO\"]*100}%`);\nformattedDiscounts.push(`${100 - discounts[\"ASSINANTE\"]*100}%`);\nformattedDiscounts.push(`${100 - discounts[\"FROTA\"]*100}%`);\n\nreturn {payload: formattedDiscounts};",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 860,
+        "wires": [
+            [
+                "02fcbee7cf3653db",
+                "7dd24f64f24eebcb",
+                "381e1404b7063322"
+            ]
+        ]
+    },
+    {
+        "id": "02fcbee7cf3653db",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "add459b43846ad81",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Avulso",
+        "format": "{{msg.payload[0]}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 650,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7dd24f64f24eebcb",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "add459b43846ad81",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Assinante",
+        "format": "{{msg.payload[1]}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "381e1404b7063322",
+        "type": "ui_text",
+        "z": "7ff87b268efdbf78",
+        "group": "add459b43846ad81",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Frota",
+        "format": "{{msg.payload[2]}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 650,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "043ba3da5d17d312",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "newAvulso",
+        "label": "Avulso",
+        "tooltip": "",
+        "group": "0587f84de3fdfc47",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 410,
+        "y": 1040,
+        "wires": [
+            [
+                "d769c6a856537975"
+            ]
+        ]
+    },
+    {
+        "id": "d769c6a856537975",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newAvulsoDiscount",
+        "func": "flow.set('newAvulsoDiscount', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ee2c1924a2284a9d",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "newAssinante",
+        "label": "Assinante",
+        "tooltip": "",
+        "group": "0587f84de3fdfc47",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 420,
+        "y": 1080,
+        "wires": [
+            [
+                "5defcb34bac9b29a"
+            ]
+        ]
+    },
+    {
+        "id": "5defcb34bac9b29a",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newAssinanteDiscount",
+        "func": "flow.set('newAssinanteDiscount', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd9fd3ec1f5a68c1",
+        "type": "ui_text_input",
+        "z": "7ff87b268efdbf78",
+        "name": "newFrota",
+        "label": "Frota",
+        "tooltip": "",
+        "group": "0587f84de3fdfc47",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 400,
+        "y": 1120,
+        "wires": [
+            [
+                "80a6e5425f2023dd"
+            ]
+        ]
+    },
+    {
+        "id": "80a6e5425f2023dd",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "newFrotaDiscount",
+        "func": "flow.set('newFrotaDiscount', msg.payload);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aade35e4867ea85f",
+        "type": "ui_button",
+        "z": "7ff87b268efdbf78",
+        "name": "",
+        "group": "0587f84de3fdfc47",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Atualizar Descontos",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 440,
+        "y": 1180,
+        "wires": [
+            [
+                "e1648bdf1eca73f2"
+            ]
+        ]
+    },
+    {
+        "id": "e1648bdf1eca73f2",
+        "type": "function",
+        "z": "7ff87b268efdbf78",
+        "name": "set new discounts",
+        "func": "let discounts = global.get('discounts');\n\nconst newAvulsoDiscount = flow.get('newAvulsoDiscount');\nconst newAssinanteDiscount = flow.get('newAssinanteDiscount');\nconst newFrotaDiscount = flow.get('newFrotaDiscount');\n\nif (newAvulsoDiscount !== undefined) discounts[\"AVULSO\"] = (100 - newAvulsoDiscount) / 100;\nif (newAssinanteDiscount !== undefined) discounts[\"ASSINANTE\"] = (100 - newAssinanteDiscount) / 100;\nif (newFrotaDiscount !== undefined) discounts[\"FROTA\"] = (100 - newFrotaDiscount) / 100;\n\nglobal.set('discounts', discounts);",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 1180,
+        "wires": [
+            []
+        ]
     }
 ]
