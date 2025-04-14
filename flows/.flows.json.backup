@@ -312,7 +312,7 @@
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0,\n    clientType: ''\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0,\n    chargerType: '',\n    powerDivider: 70\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    period: null,\n    pricePerEnergy: 0\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('base_prices', {\n    \"AC_LENTO\": [1.2, 1.8],\n    \"AC_RAPIDO\": [1.8, 2.5],\n    \"DC_RAPIDO\": [2.5, 4]\n});\n\nglobal.set('discounts', {\n    \"AVULSO\": 1,\n    \"ASSINANTE\": 0.95,\n    \"FROTA\": 0.85\n})\n\nglobal.set('base_time_prices', [])",
+        "initialize": "const user = {\n    name: '',\n    remainingEnergy: 0,\n    totalEnergy: 0,\n    clientType: ''\n}\n\nconst station = {\n    enable: false,\n    transferedEnergy: 0,\n    power: 0,\n    chargerType: '',\n    powerDivider: 70\n}\n\nconst bill = {\n    date: '',\n    username: '',\n    chargedEnergy: 0,\n    value: 0,\n    pricePerEnergy: 0,\n    isAccounted: false\n}\n\nconst bills = [];\n\nflow.set('user', user);\nflow.set('station', station);\nflow.set('bill', bill);\nglobal.set('bills', bills);\n\nglobal.set('base_prices', {\n    \"AC_LENTO\": [1.2, 1.8],\n    \"AC_RAPIDO\": [1.8, 2.5],\n    \"DC_RAPIDO\": [2.5, 4]\n});\n\nglobal.set('discounts', {\n    \"AVULSO\": 1,\n    \"ASSINANTE\": 0.95,\n    \"FROTA\": 0.85\n});\n\nglobal.set('base_time_prices', []);\n\nglobal.set('billsPerTimeSlot', {\n    \"0-3\": { totalRev: 0, totalBills: 0, totalEnergy: 0 },\n    \"3-6\": { totalRev: 0, totalBills: 0, totalEnergy: 0 },\n    \"6-9\": { totalRev: 0, totalBills: 0, totalEnergy: 0 },\n    \"9-12\": { totalRev: 0, totalBills: 0, totalEnergy: 0 },\n    \"12-15\": { totalRev: 0, totalBills: 0, totalEnergy: 0 },\n    \"15-18\": { totalRev: 0, totalBills: 0, totalEnergy: 0 },\n    \"18-21\": { totalRev: 0, totalBills: 0, totalEnergy: 0 },\n    \"21-24\": { totalRev: 0, totalBills: 0, totalEnergy: 0 }\n});",
         "finalize": "",
         "libs": [],
         "x": 590,
@@ -1738,7 +1738,7 @@
         "type": "function",
         "z": "7ff87b268efdbf78",
         "name": "sum revenues",
-        "func": "let bills = global.get('bills');\nlet billsPerTimeSlot = {\n    \"0-3\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"3-6\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"6-9\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"9-12\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"12-15\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"15-18\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"18-21\": { totalRev: 0, totalBills: 0, totalEnergy: 0},\n    \"21-24\": { totalRev: 0, totalBills: 0, totalEnergy: 0}\n}\n\nfor (const b in bills) {\n    const hour = b.date.getHours();\n    const value = b[\"value\"];\n    const energy = b.chargedEnergy;\n    switch (true){\n        case (0 <= hour && hour < 3):\n            billsPerTimeSlot[\"0-3\"].totalBills += 1;\n            billsPerTimeSlot[\"0-3\"].totalRev += value;\n            billsPerTimeSlot[\"0-3\"].totalEnergy += energy;\n            break;\n        case (3 <= hour && hour < 6):\n            billsPerTimeSlot[\"3-6\"].totalBills += 1;\n            billsPerTimeSlot[\"3-6\"].totalRev += value;\n            billsPerTimeSlot[\"3-6\"].totalEnergy += energy;\n            break;\n        case (6 <= hour && hour < 9):\n            billsPerTimeSlot[\"6-9\"].totalBills += 1;\n            billsPerTimeSlot[\"6-9\"].totalRev += value;\n            billsPerTimeSlot[\"6-9\"].totalEnergy += energy;\n            break;\n        case (9 <= hour && hour < 12):\n            billsPerTimeSlot[\"9-12\"].totalBills += 1;\n            billsPerTimeSlot[\"9-12\"].totalRev += value;\n            billsPerTimeSlot[\"9-12\"].totalEnergy += energy;\n            break;\n        case (12 <= hour && hour < 15):\n            billsPerTimeSlot[\"12-15\"].totalBills += 1;\n            billsPerTimeSlot[\"12-15\"].totalRev += value;\n            billsPerTimeSlot[\"12-15\"].totalEnergy += energy;\n            break;\n        case (15 <= hour && hour < 18):\n            billsPerTimeSlot[\"15-18\"].totalBills += 1;\n            billsPerTimeSlot[\"15-18\"].totalRev += value;\n            billsPerTimeSlot[\"15-18\"].totalEnergy += energy;\n            break;\n        case (18 <= hour && hour < 21):\n            billsPerTimeSlot[\"18-21\"].totalBills += 1;\n            billsPerTimeSlot[\"18-21\"].totalRev += value;\n            billsPerTimeSlot[\"18-21\"].totalEnergy += energy;\n            break;\n        case (21 <= hour && hour < 24):\n            billsPerTimeSlot[\"21-24\"].totalBills += 1;\n            billsPerTimeSlot[\"21-24\"].totalRev += value;\n            billsPerTimeSlot[\"21-24\"].totalEnergy += energy;\n            break;\n        default:\n            break;\n    }\n}\n\nlet formattedBills = {};\n\nfor (const slot in billsPerTimeSlot) {\n    const data = billsPerTimeSlot[slot];\n    formattedBills[slot] = {\n        totalRev: `R$ ${data.totalRev.toFixed(2)}`,\n        totalBills: data.totalBills, // mantido como número\n        totalEnergy: `${data.totalEnergy.toFixed(2)} kWh`\n    };\n}\n\nreturn { payload: formattedBills };",
+        "func": "let bills = global.get('bills');\nconsole.log(bills)\nlet billsPerTimeSlot = global.get('billsPerTimeSlot');\n\nfor (const b of bills) {\n    if (b.isAccounted) continue\n    const hour = b.date.getHours();\n    const value = b[\"value\"];\n    const energy = b.chargedEnergy;\n    switch (true){\n        case (0 <= hour && hour < 3):\n            billsPerTimeSlot[\"0-3\"].totalBills += 1;\n            billsPerTimeSlot[\"0-3\"].totalRev += value;\n            billsPerTimeSlot[\"0-3\"].totalEnergy += energy;\n            break;\n        case (3 <= hour && hour < 6):\n            billsPerTimeSlot[\"3-6\"].totalBills += 1;\n            billsPerTimeSlot[\"3-6\"].totalRev += value;\n            billsPerTimeSlot[\"3-6\"].totalEnergy += energy;\n            break;\n        case (6 <= hour && hour < 9):\n            billsPerTimeSlot[\"6-9\"].totalBills += 1;\n            billsPerTimeSlot[\"6-9\"].totalRev += value;\n            billsPerTimeSlot[\"6-9\"].totalEnergy += energy;\n            break;\n        case (9 <= hour && hour < 12):\n            billsPerTimeSlot[\"9-12\"].totalBills += 1;\n            billsPerTimeSlot[\"9-12\"].totalRev += value;\n            billsPerTimeSlot[\"9-12\"].totalEnergy += energy;\n            break;\n        case (12 <= hour && hour < 15):\n            billsPerTimeSlot[\"12-15\"].totalBills += 1;\n            billsPerTimeSlot[\"12-15\"].totalRev += value;\n            billsPerTimeSlot[\"12-15\"].totalEnergy += energy;\n            break;\n        case (15 <= hour && hour < 18):\n            billsPerTimeSlot[\"15-18\"].totalBills += 1;\n            billsPerTimeSlot[\"15-18\"].totalRev += value;\n            billsPerTimeSlot[\"15-18\"].totalEnergy += energy;\n            break;\n        case (18 <= hour && hour < 21):\n            billsPerTimeSlot[\"18-21\"].totalBills += 1;\n            billsPerTimeSlot[\"18-21\"].totalRev += value;\n            billsPerTimeSlot[\"18-21\"].totalEnergy += energy;\n            break;\n        case (21 <= hour && hour < 24):\n            billsPerTimeSlot[\"21-24\"].totalBills += 1;\n            billsPerTimeSlot[\"21-24\"].totalRev += value;\n            billsPerTimeSlot[\"21-24\"].totalEnergy += energy;\n            break;\n        default:\n            break;\n    }\n    b.isAccounted = true;\n}\n\nglobal.set('billsPerTimeSlot', billsPerTimeSlot);\n\nlet formattedBills = {};\n\nfor (const slot in billsPerTimeSlot) {\n    const data = billsPerTimeSlot[slot];\n    formattedBills[slot] = {\n        totalRev: `R$ ${data.totalRev.toFixed(2)}`,\n        totalBills: data.totalBills, // mantido como número\n        totalEnergy: `${data.totalEnergy.toFixed(2)} kWh`\n    };\n}\n\nreturn { payload: formattedBills };",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1772,7 +1772,8 @@
                 "ec43f28041e2db80",
                 "d71e81d27ac9e927",
                 "391cf5de49143500",
-                "cf71967336c32d4b"
+                "cf71967336c32d4b",
+                "1eae0284212ef027"
             ]
         ]
     },
@@ -1920,7 +1921,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
@@ -2511,7 +2512,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
@@ -2537,7 +2538,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
@@ -2599,7 +2600,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
@@ -2625,7 +2626,7 @@
         "width": 0,
         "height": 0,
         "passthru": true,
-        "mode": "text",
+        "mode": "number",
         "delay": 300,
         "topic": "topic",
         "sendOnBlur": true,
@@ -3000,5 +3001,21 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "1eae0284212ef027",
+        "type": "debug",
+        "z": "7ff87b268efdbf78",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 340,
+        "wires": []
     }
 ]
